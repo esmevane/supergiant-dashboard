@@ -1,0 +1,8 @@
+_book
+.gem
+.DS_Store
+.sass-cache/
+/notes/
+/node_modules/
+/tmp/
+/npm-debug.log

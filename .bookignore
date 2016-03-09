@@ -1,0 +1,9 @@
+/app
+/lib
+/spec
+/.babelrc
+/book.json
+/package.json
+/server.js
+/webpack.config.js
+/webpack.config.prod.js
