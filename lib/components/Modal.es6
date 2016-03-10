@@ -24,8 +24,8 @@ class ModalContainer extends React.Component {
 }
 
 function mapStateToProps(state) {
-  let [component] = state.getIn(['modal', 'content']).toJS()
-  let hidden      = state.getIn(['modal', 'hidden'])
+  let [component] = state.getIn(['modals', 'content']).toJS()
+  let hidden      = state.getIn(['modals', 'hidden'])
   return { component, hidden }
 }
 

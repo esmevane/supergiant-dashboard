@@ -18,27 +18,27 @@ $base-z-index: 0;
 
 // Colors
 /* coolors.co/97f9f9-a4def9-c1e0f7-cfbae1-c59fc9 */
-$color1: #97f9f9;
-$color2: #a4def9;
-$color3: #c1e0f7;
-$color4: #cfbae1;
-$color5: rgba(211, 55, 133, 1);
+$color1: #888693;
+$color2: #90C6E4;
+$color3: #879DA8;
+$color4: #101F30;
+$color5: #161327;
 
 // Animations
 $base-transition: all 0.3s ease;
 
 // Font Colors
-$base-white: rgba(250, 250, 250, 1);
+$base-white: white;
 $base-black: darken($color5, 50%);
-$base-background-color: $base-white;
-$base-font-color: $base-black;
-$accent-color: darken($color2, 20%);
-$headline-color: darken($color3, 20%);
-$byline-color: darken($color4, 60%);
-$action-color: darken($color5, 5%);
+$base-background-color: $color5;
+$base-font-color: $color2;
+$accent-color: $color2;
+$headline-color: $base-white;
+$byline-color: lighten($color3, 25%);
+$action-color: lighten($color5, 5%);
 
 // Border
-$base-border-color: transparentize($headline-color, 0.1);
+$base-border-color: transparentize(lighten($action-color, 10%), 0.1);
 $base-border: 1px solid transparentize($base-border-color, 0.3);
 $heavy-border: 3px solid transparentize($base-border-color, 0.3);
 $fat-border: 7px solid transparentize($base-border-color, 0.3);

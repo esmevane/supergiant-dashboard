@@ -3,10 +3,10 @@ button {
   @include appearance(none)
 
   -webkit-font-smoothing: antialiased;
-  background-color: $headline-color;
-  border: none;
+  background-color: $base-background-color;
+  border: $heavy-border;
   border-radius: $base-border-radius;
-  color: transparentize($base-white, 0.1);
+  color: lighten($base-border-color, 20%);
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
@@ -22,7 +22,7 @@ button {
 
   &:hover,
   &:focus {
-    background-color: lighten(saturate($headline-color, 15%), 5%);
+    background-color: lighten(saturate($base-background-color, 15%), 5%);
     outline: none;
   }
 
@@ -34,10 +34,10 @@ button {
 
 a.action {
   -webkit-font-smoothing: antialiased;
-  background-color: $headline-color;
-  border: none;
+  background-color: $base-background-color;
+  border: $heavy-border;
   border-radius: $base-border-radius;
-  color: transparentize($base-white, 0.1);
+  color: lighten($base-border-color, 20%);
   display: inline-block;
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -53,13 +53,12 @@ a.action {
 
   &:hover,
   &:focus {
-    background-color: lighten(saturate($headline-color, 15%), 5%);
-    color: transparentize($base-white, 0.1);
+    background-color: lighten(saturate($base-background-color, 15%), 5%);
     outline: none;
   }
 
   &.call-to-action {
-    background-color: lighten($headline-color, 20%);
+    background-color: lighten(saturate($base-background-color, 15%), 5%);
     border: none;
     color: transparentize($base-background-color, 0.1);
   }
