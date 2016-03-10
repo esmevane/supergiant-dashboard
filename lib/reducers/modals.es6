@@ -3,9 +3,9 @@ import { InitialState } from '../schema'
 import * as Actions from '../actions'
 import { combine } from './combine'
 
-const initializer = InitialState.get('modal')
+const modalState = InitialState.get('modals')
 
-function content(state = initializer.get('content'), action) {
+function content(state = modalState.get('content'), action) {
   switch (action.type) {
     case Actions.OpenModal:
       return fromJS([action.component])
@@ -16,7 +16,7 @@ function content(state = initializer.get('content'), action) {
   }
 }
 
-function hidden(state = initializer.get('hidden'), action) {
+function hidden(state = modalState.get('hidden'), action) {
   switch (action.type) {
     case Actions.ShowModal:
       return false
@@ -27,10 +27,6 @@ function hidden(state = initializer.get('hidden'), action) {
   }
 }
 
-function meta(state = initializer.get('meta'), action) {
-  return state
-}
+function meta(state = modalState.get('meta'), action) { return state }
 
-const manifest = { content, hidden, meta }
-
-export const modal = combine(manifest, initializer)
+export default combine({ content, hidden, meta }, modalState)

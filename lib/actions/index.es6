@@ -13,10 +13,10 @@ export const invalidateDashboards = () => ({ type: InvalidateDashboards })
 
 // Modal Actions
 //
-export const ShowModal = "modal:show"
-export const HideModal = "modal:hide"
-export const CloseModal = "modal:close"
-export const OpenModal = "modal:open"
+export const ShowModal = "modals:show"
+export const HideModal = "modals:hide"
+export const CloseModal = "modals:close"
+export const OpenModal = "modals:open"
 
 export function openModal(component) {
   let type = OpenModal

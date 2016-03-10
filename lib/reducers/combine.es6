@@ -17,7 +17,6 @@ function* limbs(manifest) {
 // recognizing an immutable interface, we defer the serialization to this
 // final output.
 //
-//
 export function combine(manifest, startState = fromJS({}), startAction = {}) {
   const combiner = (state = startState, action = startAction) => {
     let merge = (state, { name, reducer }) => {

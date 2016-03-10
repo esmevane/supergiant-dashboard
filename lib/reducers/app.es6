@@ -2,7 +2,9 @@ import { InitialState } from '../schema'
 import * as Actions from '../actions'
 import { combine } from './combine'
 
-function faded(state = InitialState.getIn(['visuals', 'faded']), action) {
+const appState = InitialState.get('app')
+
+function faded(state = appState.get('faded'), action) {
   switch (action.type) {
     case Actions.AppFade:
       return true
@@ -13,9 +15,6 @@ function faded(state = InitialState.getIn(['visuals', 'faded']), action) {
   }
 }
 
-function meta(state = InitialState.getIn(['visuals', 'meta']), action) {
-  return state
-}
+function meta(state = appState.get('meta'), action) { return state }
 
-const manifest = { faded, meta }
-export const visuals = combine(manifest, InitialState.get('visuals'))
+export default combine({ faded, meta }, appState)

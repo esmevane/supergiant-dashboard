@@ -1,8 +1,8 @@
 import { fromJS } from 'immutable'
 
 export const InitialState = fromJS({
-  routing: {},
+  app: { faded: false, meta: {} },
   form: {},
-  modal: { content: [], hidden: true, meta: {} },
-  visuals: { faded: false, meta: {} }
+  modals: { content: [], hidden: true, meta: {} },
+  routing: {}
 })
