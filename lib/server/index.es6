@@ -22,6 +22,7 @@ import webpack from 'webpack'
 import DevServer from 'webpack-dev-server'
 import config from '../../webpack.config'
 import statics from './statics'
+import authorize from './auth'
 
 const Environment = process.env.NODE_ENV || 'development'
 const appHost = `http://localhost:${config.meta.port - 1}`
@@ -37,6 +38,8 @@ let app = express()
 let messages = new Messages
 
 app.set('secret', secret)
+app.set('username', 'admin')
+app.set('password', 'password')
 
 messages.add(function* () {
   yield action(`Primary application URL`)
@@ -44,11 +47,12 @@ messages.add(function* () {
   yield info(appHost)
 })
 
-// Middleware in use:  Cookies, Sessions, Body Parser, Flash, and Passport.
+// Middleware in use:  Body parser, basic auth, morgan logging.
 //
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.use(morgan('combined'))
+app.use(morgan('common'))
+app.use(authorize)
 
 // Some of these features are held at a separate file because the lack of
 // modularity had previously poisoned debugging efforts.  The intention isn't
@@ -60,7 +64,7 @@ statics(app, messages, Environment)
 // All unscripted routes immediately defer to the index route, which has an
 // internal route handler on the client side.
 //
-app.get('*', (request, response)  => { response.sendFile(index) })
+app.get('*', (request, response) => response.sendFile(index))
 
 if (Environment !== 'test') {
   // We open the central app on the base port.
