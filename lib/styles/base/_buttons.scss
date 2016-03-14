@@ -4,7 +4,7 @@ button {
 
   -webkit-font-smoothing: antialiased;
   background-color: $base-background-color;
-  border: $heavy-border;
+  border: $base-border;
   border-radius: $base-border-radius;
   color: lighten($base-border-color, 20%);
   cursor: pointer;
@@ -35,7 +35,7 @@ button {
 a.action {
   -webkit-font-smoothing: antialiased;
   background-color: $base-background-color;
-  border: $heavy-border;
+  border: $base-border;
   border-radius: $base-border-radius;
   color: lighten($base-border-color, 20%);
   display: inline-block;

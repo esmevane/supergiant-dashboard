@@ -48,6 +48,7 @@
     "babel-preset-stage-0": "^6.3.13",
     "body-parser": "^1.15.0",
     "chai": "^3.4.1",
+    "chai-immutable": "^1.5.3",
     "co-express": "^1.2.1",
     "colors": "^1.1.2",
     "cookie-parser": "^1.4.1",

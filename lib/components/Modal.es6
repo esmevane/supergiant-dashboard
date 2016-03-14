@@ -3,18 +3,17 @@ import { connect } from 'react-redux'
 import { hideModal } from '../actions'
 
 class ModalContainer extends React.Component {
-  handleClick = (event) => {
-    if (event.target === this.refs.container) {
-      this.props.dispatch(hideModal())
-    }
-  };
-
   render() {
-    let classes = (this.props.hidden ? '' : 'visible')
+    const classes = (this.props.hidden ? 'modal' : 'modal visible')
+    const click = (event) => {
+      const outsideClick = this.refs.container === event.target
+      const { dispatch } = this.props
+
+      if (outsideClick) { dispatch(hideModal()) }
+    }
+
     return (
-      <div ref='container'
-           onClick={ this.handleClick }
-           className={ `modal ${classes}` } >
+      <div ref='container' onClick={ click } className={ classes } >
         <div className='modal-content'>
           { this.props.component }
         </div>
@@ -24,8 +23,10 @@ class ModalContainer extends React.Component {
 }
 
 function mapStateToProps(state) {
-  let [component] = state.getIn(['modals', 'content']).toJS()
-  let hidden      = state.getIn(['modals', 'hidden'])
+  const modalState    = state.get('modals')
+  const [ component ] = modalState.get('content').toJS()
+  const hidden        = modalState.get('hidden')
+
   return { component, hidden }
 }
 

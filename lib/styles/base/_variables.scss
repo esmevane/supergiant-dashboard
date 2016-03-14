@@ -38,7 +38,7 @@ $byline-color: lighten($color3, 25%);
 $action-color: lighten($color5, 5%);
 
 // Border
-$base-border-color: transparentize(lighten($action-color, 10%), 0.1);
+$base-border-color: transparentize($headline-color, 0.4);
 $base-border: 1px solid transparentize($base-border-color, 0.3);
 $heavy-border: 3px solid transparentize($base-border-color, 0.3);
 $fat-border: 7px solid transparentize($base-border-color, 0.3);
