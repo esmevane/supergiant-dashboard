@@ -1,0 +1,26 @@
+.apps-list button { margin: $base-font-size }
+
+.apps-list-content {
+  justify-content: center;
+  display: flex;
+  margin: $base-font-size 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.apps-list-item {
+  align-content: center;
+  align-items: center;
+  border: $base-border;
+  display: flex;
+  height: $base-font-size * 10;
+  justify-content: center;
+  margin: $base-font-size * 0.25;
+  min-width: 30%;
+  text-align: center;
+  transition: $base-transition;
+
+  &:hover {
+    background-color: transparentize($base-white, 0.95);
+  }
+}
