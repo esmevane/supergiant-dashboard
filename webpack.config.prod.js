@@ -29,7 +29,7 @@ module.exports = {
   devtool:  'eval',
   stats:    { colors: true, modules: true, reasons: true },
   progress: true,
-  entry:    [ path.join(__dirname, 'lib', 'index.es6') ],
+  entry:    [ path.join(__dirname, 'lib', 'index.js') ],
   plugins:  [
     new webpack.optimize.UglifyJsPlugin({ sourceMap: false, mangle: true }),
     new ExtractTextPlugin('application.css'),
@@ -38,7 +38,7 @@ module.exports = {
     })
   ],
   resolve: {
-    extensions: ['', '.js', '.es6', '.sass', '.scss'],
+    extensions: ['', '.js', '.sass', '.scss'],
     modulesDirectories: ['lib', 'node_modules']
   },
   postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
@@ -49,7 +49,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test:    /\.es6$/,
+        test:    /\.js$/,
         include: [ path.join(__dirname, 'lib') ],
         loaders: [ 'react-hot', 'babel-loader' ],
       },

@@ -26,14 +26,14 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:' + meta.port,
     'webpack/hot/only-dev-server',
-    path.join(__dirname, 'lib', 'index.es6')
+    path.join(__dirname, 'lib', 'index.js')
   ],
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
   ],
   resolve: {
-    extensions: ['', '.js', '.es6', '.sass', '.scss'],
+    extensions: ['', '.js', '.sass', '.scss'],
     modulesDirectories: ['lib', 'node_modules']
   },
   postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
@@ -45,7 +45,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test:    /\.es6$/,
+        test:    /\.js$/,
         include: [ path.join(__dirname, 'lib') ],
         loaders: [ 'react-hot', 'babel-loader' ],
       },
