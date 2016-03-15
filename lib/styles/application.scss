@@ -6,13 +6,13 @@
 
 // Sections are reusable content regions.
 //
+@import "sections/dashboard";
+@import "sections/drop-in";
 @import "sections/errors";
 @import "sections/menu";
 @import "sections/modal";
 @import "sections/not-found";
 @import "sections/swap";
-@import "sections/drop-in";
-@import "sections/welcome";
 
 // Pages describe the foundational styles of a given page.
 //

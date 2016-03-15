@@ -35,7 +35,7 @@ class App extends React.Component {
 }
 
 function mapStateToProps(state) {
-  let faded = state.getIn(['visuals', 'faded'])
+  let faded = state.getIn(['dashboards', 'faded'])
   return { faded }
 }
 

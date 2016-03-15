@@ -3,8 +3,10 @@ import { reducer as formReducer } from 'redux-form'
 import { combine } from './combine'
 import { InitialState } from '../schema'
 
-import app from './app'
+import apps from './apps'
+import dashboards from './dashboards'
 import modals from './modals'
+import nodes from './nodes'
 
 // Redux Form doesn't natively understand immutable things, so we do some
 // contortions around that here.  Basically what you're looking at is a snippet
@@ -36,5 +38,5 @@ function routing(state = InitialState.get('routing'), { type, payload }) {
   return state
 }
 
-const manifest = { app, form, modals, routing }
+const manifest = { apps, dashboards, form, modals, nodes, routing }
 export const Supergiant = combine(manifest, InitialState)

@@ -7,14 +7,14 @@ function* hideModal() {
     yield take(Actions.HideModal)
     yield call(simulateLatency)
     yield put(Actions.closeModal())
-    yield put(Actions.appUnfade())
+    yield put(Actions.dashboardUnfade())
   }
 }
 
 function* showModal() {
   while(true) {
     yield take(Actions.OpenModal)
-    yield put(Actions.appFade())
+    yield put(Actions.dashboardFade())
     yield put(Actions.showModal())
   }
 }
