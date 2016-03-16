@@ -16,7 +16,8 @@
   height: $base-font-size * 10;
   justify-content: center;
   margin: $base-font-size * 0.25;
-  min-width: 30%;
+  padding: $base-font-size * 0.5;
+  width: 30%;
   text-align: center;
   transition: $base-transition;
 
