@@ -1,8 +1,9 @@
 .menu {
+  border-bottom: $base-border;
   display: block;
   list-style-type: none;
+  margin: 0;
   text-align: center;
-  border-bottom: $base-border;
 
   li {
     display: inline-block;
