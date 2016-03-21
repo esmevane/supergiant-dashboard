@@ -38,6 +38,13 @@ textarea {
   transition: $base-transition;
   width: 100%;
 
+  &.discrete {
+    display: inline-block;
+    resize: none;
+    border: none;
+    overflow: auto;
+  }
+
   &:hover { border-color: darken($base-border-color, 10%) }
 
   &:focus {
