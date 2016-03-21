@@ -6,6 +6,25 @@
   flex-wrap: wrap;
 }
 
+.component-link {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: $base-font-size 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.component-color-dot {
+  border-radius: $base-font-size * 5;
+  border: $base-border;
+  display: inline-block;
+  margin: 0 $base-font-size * 0.5;
+  height: $base-font-size;
+  width: $base-font-size;
+}
+
 .components-list-item {
   align-content: center;
   align-items: center;
