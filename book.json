@@ -9,11 +9,11 @@
   "plugins": ["edit-link", "prism", "-highlight", "github", "styles-sass"],
   "pluginsConfig": {
     "edit-link": {
-      "base": "https://github.com/qbox-io/supergiant/tree/master",
+      "base": "https://github.com/supergiant/supergiant-dashboard/tree/master",
       "label": "Edit This Page"
     },
     "github": {
-      "url": "https://github.com/qbox-io/supergiant"
+      "url": "https://github.com/supergiant/supergiant-dashboard"
 
     }
   }

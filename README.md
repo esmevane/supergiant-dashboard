@@ -13,10 +13,20 @@ npm install -g gitbook-cli
 Clone the repo, change directory, and install its dependencies:
 
 ```bash
-git clone git@github.com:qbox-io/supergiant
-cd supergiant
+git clone git@github.com:supergiant/supergiant-dashboard
+cd supergiant-dashboard
 npm install && npm run book
 ```
+
+## Book Server
+
+Serve a dynamic live-reloading server for the gitbook:
+
+```bash
+npm run book:serve
+```
+
+## Development and Authoring
 
 Enter into development mode:
 
@@ -46,12 +56,6 @@ Author a volume of the book:
 
 ```bash
 npm run book
-```
-
-Serve a dynamic live-reloading server for the gitbook:
-
-```bash
-npm run book:serve
 ```
 
 Copy a static release of the gitbook to `app`:
