@@ -1,4 +1,13 @@
-body { margin: 0 $base-font-size * 5 }
+$gradient-0: transparentize($base-background-color, 0);
+$gradient-1: transparentize($base-background-color, 0.2);
+$background-gradient: linear-gradient($gradient-0 0, $gradient-1 100%);
+
+body {
+  background: $base-background-color;
+  background: $background-gradient, url(/images/entropy.jpg);
+  background-size: cover;
+  margin: 0 $base-font-size * 5;
+}
 
 section {
   margin: $base-font-size 0;
