@@ -4,17 +4,18 @@
 @import "base/base";
 @import "neat";
 
+// Fonts
+@import "fonts/doppio-one";
+
 // Sections are reusable content regions.
 //
-@import "sections/apps";
-@import "sections/components";
+@import "sections/app";
 @import "sections/dashboard";
 @import "sections/drop-in";
-@import "sections/errors";
-@import "sections/main";
 @import "sections/menu";
 @import "sections/modal";
 @import "sections/not-found";
+@import "sections/omnibar";
 @import "sections/swap";
 
 // Pages describe the foundational styles of a given page.

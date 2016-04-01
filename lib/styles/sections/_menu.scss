@@ -1,15 +1,42 @@
 .menu {
-  border-bottom: $base-border;
+  align-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: $base-font-size * 3.5;
+  margin: $base-font-size 0;
+  justify-content: flex-end;
+}
+
+.menu-controls {
+  align-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: $base-font-size * 3.5;
+  justify-content: space-around;
+}
+
+.menu-controls { width: 25% }
+.menu-omnibar { min-width: 50% }
+
+.menu-logo-banner { background: url(/images/supergiant.png) }
+.menu-search-icon { background: url(/images/icon-search.png) }
+.menu-config-icon { background: url(/images/icon-config.png) }
+
+.menu-logo-banner, .menu-search-icon, .menu-config-icon {
+  background-size: cover;
   display: block;
-  list-style-type: none;
-  margin: 0;
-  text-align: center;
+}
 
-  li {
-    display: inline-block;
-    padding: $base-font-size;
-    border-left: $base-border;
+.menu-logo-banner {
+  min-width: $base-font-size * 9.375;
+  min-height: $base-font-size * 2.1875;
+}
 
-    &:first-child { border-left: none; }
-  }
+.menu-search-icon, .menu-config-icon {
+  min-width: $base-font-size * 1.2;
+  min-height: $base-font-size * 1.2;
 }

@@ -1,0 +1,40 @@
+.app {
+  color: $base-white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  height: $base-font-size * 10;
+
+  aside {
+    color: $base-font-color;
+    font-size: $base-font-size * 0.8;
+    width: $base-font-size * 18;
+    margin-left: $base-font-size * 2;
+    text-align: left;
+  }
+}
+
+.app-form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: $base-font-size * 24;
+  text-align: left;
+
+  .carat {
+    margin-left: $base-font-size;
+    text-align: center;
+    color: #00cc00;
+  }
+}
+
+.app-form-title { width: 100% }
+.app-form-input { width: 60% }
+.app-form-confirm button {
+  background-color: $base-black;
+  border: none;
+  color: $base-white;
+  text-transform: uppercase;
+}

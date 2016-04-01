@@ -1,5 +1,5 @@
 // Typography
-$base-font-family: 'Helvetica', sans-serif;
+$base-font-family: 'Doppio One', 'Helvetica', sans-serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -22,7 +22,7 @@ $color1: #888693;
 $color2: #90C6E4;
 $color3: #879DA8;
 $color4: #101F30;
-$color5: #161327;
+$color5: #1f172f;
 
 // Animations
 $base-transition: all 0.3s ease;
@@ -37,8 +37,15 @@ $headline-color: $base-white;
 $byline-color: lighten($color3, 25%);
 $action-color: lighten($color5, 5%);
 
+$error-color: adjust-color($color1,
+  $lightness: -10%,
+  $hue: +40%,
+  $saturation: +30%,
+  $alpha: -0.3
+);
+
 // Border
-$base-border-color: transparentize($headline-color, 0.4);
+$base-border-color: $base-white;
 $base-border: 1px solid transparentize($base-border-color, 0.3);
 $heavy-border: 3px solid transparentize($base-border-color, 0.3);
 $fat-border: 7px solid transparentize($base-border-color, 0.3);

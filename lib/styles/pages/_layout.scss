@@ -1,12 +1,22 @@
-$gradient-0: transparentize($base-background-color, 0);
-$gradient-1: transparentize($base-background-color, 0.2);
-$background-gradient: linear-gradient($gradient-0 0, $gradient-1 100%);
-
 body {
   background: $base-background-color;
-  background: $background-gradient, url(/images/entropy.jpg);
-  background-size: cover;
   margin: 0 $base-font-size * 5;
+}
+
+#app { z-index: 0 }
+
+#starfield {
+  z-index: -2;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#supergiant {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 section {
