@@ -53,12 +53,15 @@ textarea {
   font-family: $base-font-family;
   font-size: $base-font-size;
   margin: 0;
-  padding-bottom: $base-font-size * 0.5;
+  padding: $base-font-size * 0.5;
   transition: $base-transition;
   width: 100%;
 
-  @include placeholder {
-    color: transparentize($base-font-color, 0.8)
+  @include placeholder { color: transparentize($base-font-color, 0.8) }
+
+  &.form-input-invalid {
+    background-color: $error-color;
+    border-bottom: 2px solid lighten($error-color, 10%);
   }
 
   &.discrete {
@@ -68,7 +71,13 @@ textarea {
     overflow: auto;
   }
 
-  &:hover { border-color: darken($base-border-color, 10%) }
+  &:hover {
+    border-color: darken($base-border-color, 10%);
+
+    &.form-input-invalid {
+      border-bottom: 2px solid lighten($error-color, 20%);
+    }
+  }
 
   &:focus {
     background-color: lighten($base-background-color, 10%);
