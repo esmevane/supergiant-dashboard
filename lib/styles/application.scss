@@ -10,6 +10,7 @@
 // Sections are reusable content regions.
 //
 @import "sections/app";
+@import "sections/component";
 @import "sections/dashboard";
 @import "sections/drop-in";
 @import "sections/menu";
@@ -22,3 +23,5 @@
 // Pages describe the foundational styles of a given page.
 //
 @import "pages/layout";
+
+@import "vendor/color-picker";
