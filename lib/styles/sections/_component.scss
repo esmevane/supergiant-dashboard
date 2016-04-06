@@ -32,19 +32,6 @@
   }
 }
 
-.create-component-form-confirm button {
-  background-color: $base-black;
-  border: none;
-  color: $base-white;
-  text-transform: uppercase;
-
-  .carat {
-    margin-left: $base-font-size;
-    text-align: center;
-    color: #00cc00;
-  }
-}
-
 .create-component-form-icons {
   align-items: flex-start;
   flex-direction: row;
@@ -70,4 +57,155 @@
 
   &.selected { border: $base-border }
   &:first-child { margin-left: 0 }
+}
+
+.component {
+  margin-top: $base-font-size;
+  position: relative;
+}
+
+.component-controls {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate3d(0,-110%,0);
+}
+
+.component-detail-resource-item-title button,
+.create-component-form-confirm button,
+.component-controls button {
+  margin: 0 $base-font-size;
+  border: none;
+  background-color: transparentize($base-black, 0.7);
+  text-transform: uppercase;
+
+  &:first-child { margin-right: 0 }
+
+  .carat {
+    margin-left: $base-font-size;
+    text-align: center;
+    color: #00cc00;
+  }
+}
+
+.component-detail-resource-item-title button {
+  color: #0c0;
+  background-color: transparent
+}
+
+.component-overview {
+  align-items: center;
+  background-color: $base-black;
+  border: 1px solid transparentize($base-font-color, 0.5);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+}
+
+$not-running-color: adjust-color($error-color,
+  $hue: 70%,
+  $lightness: 10%,
+  $saturation: 30%
+);
+
+.component-overview-controls {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: $base-font-size;
+}
+
+.component-instances-detail,
+.component-releases-detail {
+  padding-right: $base-font-size;
+  margin: 0 $base-font-size;
+  border-right: 1px solid transparentize($base-font-color, 0.5);
+}
+
+.component-instances-detail-headline,
+.component-releases-detail-headline {
+  font-size: $base-font-size * 1.25;
+  color: $base-white;
+}
+
+.component-instances-detail-content,
+.component-releases-detail-content {
+  color: transparentize($base-font-color, 0.5);
+}
+
+.component-instances-detail-controls,
+.component-instances-detail-content,
+.component-releases-detail-content,
+.component-releases-detail-controls {
+  font-size: $base-font-size * 0.75;
+
+  a { color: $base-font-color }
+}
+
+.component-instances-dialog {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: $base-font-size;
+}
+
+.component-instances-dialog-summary {
+  color: $base-white;
+  font-size: $base-font-size * 0.75;
+}
+
+.component-instances-dialog-status {
+  color: $base-white;
+  margin-bottom: $base-font-size * 0.5;
+  padding: $base-font-size;
+  padding-left: $base-font-size * 4;
+
+  &.not-running {
+    background-color: transparentize($not-running-color, 0.3);
+    border: 1px solid lighten($not-running-color, 10%);
+  }
+}
+
+.component-detail-resource-item-content-title { color: white }
+
+.component-instances-resource-item-content-summary {
+  font-size: $base-font-size * 0.75
+}
+
+.component-detail-resources {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  text-align: left;
+}
+
+.component-detail-resource-item {
+  padding: 0 $base-font-size;
+  width: 50%
+}
+
+.component-detail-resource-item-title {
+  align-items: center;
+  border-bottom: 1px solid transparentize($base-font-color, 0.5);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: $base-font-size * 2;
+  width: 100%;
 }
