@@ -1,0 +1,83 @@
+.accordion-table {
+  clear: both;
+  display: block;
+  margin: 0;
+  text-align: left;
+
+  label {
+    color: $text-actionable;
+    display: inline;
+    cursor: pointer;
+  }
+
+  article {
+    border-bottom: 1px solid $border-dark;
+    clear: both;
+    display: block;
+    padding: 1em 0;
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+    }
+
+    .context-menu {
+      float: right;
+      white-space: nowrap;
+
+      .option {
+        margin: 0 .5em;
+        display: inline-block;
+
+        &:first-child { margin-left: 0; }
+        &:last-child { margin-right: 0; }
+      }
+    }
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  input + .accordion-data {
+    max-height: 0;
+    overflow: hidden;
+
+  	-webkit-transition: max-height 0.8s;
+  	-moz-transition: max-height 0.8s;
+  	transition: max-height 0.8s;
+  }
+
+  input:checked + .accordion-data {
+    max-height: 1200px;
+    overflow: auto;
+  }
+}
+
+
+table.line-items {
+  border: none;
+  border-top: 1px solid rgba($border-dark, 0.5);
+  
+  th {
+    border: none;
+    border-bottom: 1px solid rgba($border-dark, 0.5);
+    font-size: .8em;
+    color: $border-dark;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid rgba($border-dark, 0.5);
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

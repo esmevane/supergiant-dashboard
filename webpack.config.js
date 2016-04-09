@@ -1,11 +1,12 @@
-var path         = require('path');
-var autoprefixer = require('autoprefixer');
-var webpack      = require('webpack');
-var meta         = { port: 9002 };
-var styles       = path.resolve(__dirname, './lib', 'styles');
-var bourbonNeat  = require('node-neat').includePaths;
-var stylePaths   = [styles].concat(bourbonNeat);
-var styleQueries = [];
+var path          = require('path');
+var autoprefixer  = require('autoprefixer');
+var webpack       = require('webpack');
+var meta          = { port: 9002 };
+var styles        = path.resolve(__dirname, './lib', 'styles');
+var bourbonNeat   = require('node-neat').includePaths;
+var normalizeScss = require('node-normalize-scss').includePaths;
+var stylePaths    = [styles].concat(bourbonNeat, normalizeScss);
+var styleQueries  = [];
 
 stylePaths.forEach(function(stylePath) {
   styleQueries.push("includePaths[]=" + stylePath)
@@ -49,7 +50,10 @@ module.exports = {
         include: [ path.join(__dirname, 'lib') ],
         loaders: [ 'react-hot', 'babel-loader' ],
       },
-      { test: /\.(scss|sass)$/, loader: styleLoader }
+      {
+        test: /\.(scss|sass)$/,
+        loader: styleLoader
+      }
     ]
   }
 };

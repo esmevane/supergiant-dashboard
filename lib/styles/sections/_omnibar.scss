@@ -1,9 +1,9 @@
 .omnibar {
   border: 3px solid #d8d8d8;
   border-radius: 3px;
-  margin: 0 $base-font-size;
-  display: inline-block;
-  width: $base-font-size * 40;
+  margin: 0 0 0 1em;
+  display: block;
+  width: auto;
 }
 
 #{$all-text-inputs} {
@@ -12,6 +12,6 @@
     background-color: $base-black;
     font-family: 'Courier', monospace;
     font-size: $base-font-size * 0.8;
-    padding: $base-font-size * 0.5 $base-font-size;
+    padding: $base-font-size * 0.4 $base-font-size;
   }
 }

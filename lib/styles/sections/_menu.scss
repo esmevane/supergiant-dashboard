@@ -1,42 +1,55 @@
-.menu {
-  align-content: flex-start;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: $base-font-size * 3.5;
-  margin: $base-font-size 0;
-  justify-content: flex-end;
+.application-menu {
+  display: table;
+  height: 60px;
+  width: 100%;
 }
 
 .menu-controls {
-  align-content: flex-start;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: $base-font-size * 3.5;
-  justify-content: space-around;
-}
-
-.menu-controls { width: 25% }
-.menu-omnibar { min-width: 50% }
-
-.menu-logo-banner { background: url(/images/supergiant.png) }
-.menu-search-icon { background: url(/images/icon_search.png) }
-.menu-config-icon { background: url(/images/icon_settings.png) }
-
-.menu-logo-banner, .menu-search-icon, .menu-config-icon {
-  background-size: cover;
-  display: block;
+  display: table-cell;;
+  height: 60px;
+  padding: 12px 0 0;
+  vertical-align: top;
+  width: 290px;
 }
 
 .menu-logo-banner {
-  min-width: $base-font-size * 9.375;
-  min-height: $base-font-size * 2.1875;
+  background: url(/images/supergiant.png) no-repeat 0 50%;
+  background-size: 170px auto;
+  display: inline-block;
+  height: 40px;
+  width: 170px;
+  margin: 0 12px;
+
+  &:first-child { margin-left: 0; }
+  &:last-child { margin-right: 0; }
+}
+.menu-search-icon {
+  background: url(/images/icon_search.png) no-repeat 50% 50%;
+  background-size: 24px auto;
+  display: inline-block;
+  height: 40px;
+  width: 24px;
+  margin: 0 12px;
+
+  &:first-child { margin-left: 0; }
+  &:last-child { margin-right: 0; }
+}
+.menu-config-icon {
+  background: url(/images/icon_settings.png) no-repeat 50% 50%;
+  background-size: 24px auto;
+  display: inline-block;
+  height: 40px;
+  width: 24px;
+  margin: 0 12px;
+
+  &:first-child { margin-left: 0; }
+  &:last-child { margin-right: 0; }
 }
 
-.menu-search-icon, .menu-config-icon {
-  min-width: $base-font-size * 1.2;
-  min-height: $base-font-size * 1.2;
+.menu-omnibar {
+  display: table-cell;
+  height: 60px;
+  padding: 12px 0 0;
+  vertical-align: top;
+  width: auto;
 }

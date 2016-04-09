@@ -13,7 +13,6 @@ body {
 }
 
 h1 {
-  color: transparentize($headline-color, 0.3);
   font-size: $base-font-size * 2;
   font-weight: $base-font-weight;
   line-height: $heading-line-height * 1.5;
@@ -21,7 +20,6 @@ h1 {
 }
 
 h2 {
-  color: transparentize($byline-color, 0.6);
   font-size: $base-font-size * 1.75;
   font-weight: $base-font-weight;
   line-height: $heading-line-height * 1.25;
@@ -29,7 +27,6 @@ h2 {
 }
 
 h3 {
-  color: $accent-color;
   font-size: $base-font-size * 1.5;
   font-weight: $base-font-weight;
   line-height: $heading-line-height * 1.5;
@@ -44,7 +41,6 @@ h4 {
 }
 
 h5 {
-  color: transparentize($headline-color, 0.3);
   font-size: $base-font-size;
   font-weight: $base-font-weight;
   line-height: $heading-line-height;
@@ -64,18 +60,17 @@ h6 {
 p { margin: 0 0 $small-spacing }
 
 a {
-  color: $base-white;
-  text-decoration: none;
+  color: $text-actionable;
   transition: color 0.1s linear;
 
   &:active,
   &:focus,
-  &:hover { color: darken($base-white, 15%) }
+  &:hover { color: darken($text-actionable, 10%) }
 
   &:active,
   &:focus { outline: none }
 
-  &:visited { color: darken($base-white, 20%) }
+  &:visited { color: darken($text-actionable, 20%) }
 }
 
 hr {
@@ -93,3 +88,29 @@ picture {
 }
 
 .code { font-family: monospace }
+
+.text-note {
+  color: $text-diminished;
+}
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.nowrap {
+  white-space: nowrap;
+}
+
+aside {
+  color: $base-font-color;
+  font-size: $base-font-size * 0.85;
+  text-align: left;
+  font-weight: 600;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  &.resource-note {
+    padding-right: 33%;
+  }
+}

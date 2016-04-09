@@ -1,23 +1,46 @@
-fieldset {
-  background-color: transparent;
-  border: $base-border;
-  padding: $base-spacing;
-}
-
 input,
 label,
 select {
   display: block;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: 1em;
 }
 
 label {
-  font-weight: 600;
+  font-weight: normal;
+  color: $base-white;
 
   &.required::after { content: "*" }
   abbr { display: none }
+
+  &.easy {
+    display: block;
+    color: $base-white;
+    font-size: 1.285714286em;
+    font-weight: normal;
+    margin: 1em 0;
+  }
 }
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  label {
+    margin-top: 1.5em;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  legend {
+    color: $base-white;
+    font-size: 1.285714286em;
+    font-weight: normal;
+  }
+}
+
 
 .form-error {
   position: relative;
@@ -44,20 +67,20 @@ label {
 select[multiple=multiple],
 textarea {
   background-color: transparent;
-  border-color: $action-color;
-  border-radius: $base-border-radius;
   border: none;
+  border-color: $action-color;
   border-bottom: $base-border;
+  border-radius: $base-border-radius;
   box-sizing: border-box;
   color: $base-white;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-family: $form-font-family;
+  font-size: 1em;
   margin: 0;
-  padding: $base-font-size * 0.5;
+  padding: $base-font-size * 0.5 0;
   transition: $base-transition;
   width: 100%;
 
-  @include placeholder { color: transparentize($base-font-color, 0.8) }
+  @include placeholder { color: transparentize($base-font-color, 0.67) }
 
   &.form-input-invalid {
     background-color: $error-color;
@@ -84,9 +107,24 @@ textarea {
     box-shadow: none;
     outline: none;
   }
+
+  &.easy {
+    font-size: $base-font-size * 2;
+    font-weight: 300;
+  }
+
+  &.inline {
+    display: inline-block;
+    width: auto;
+  }
 }
 
-textarea { resize: vertical }
+textarea {
+  resize: vertical;
+  padding: 0.5em 1em;
+  background: rgba(0,0,0,0.4);
+  border: $base-border;
+}
 
 input[type="search"] { @include appearance(none) }
 

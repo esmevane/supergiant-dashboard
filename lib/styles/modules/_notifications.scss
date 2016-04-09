@@ -1,0 +1,87 @@
+.notification-bar {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.notification-bar-item { transition: $base-transition }
+
+.notification-bar-content {
+  background-color: transparentize($base-black, 0.1);
+  border: $base-border;
+  border-radius: 5px;
+  margin: $base-font-size * 0.5;
+  min-width: $base-font-size * 10;
+
+  &.notification-bar-error {
+    background-color: $error-color;
+    color: $base-white
+  }
+  .notification-bar-message, .notification-bar-close {
+    display: inline-block;
+    margin: $base-font-size
+  }
+}
+
+
+.notice {
+  text-align: center;
+
+  h3 {
+    border: 2px solid $border-dark;
+    padding: 0.25em 1em;
+    line-height: 1;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &.warn {
+    h3 {
+      border-color: $warn;
+      background-image: linear-gradient(0deg, darken($warn, 40%), darken($warn, 33%));
+
+      &:before {
+        background: $warn;
+        border-radius: 1.5em;
+        content: "!";
+        display: inline-block;
+        font-weight: 700;
+        height: 1.2em;
+        line-height: 1.2em;
+        margin: 0 1em 0 0;
+        text-align: center;
+        vertical-align: middle;
+        width: 1.2em;
+      }
+    }
+  }
+  &.alert {
+    h3 {
+      border-color: $alert;
+      background-image: linear-gradient(0deg, darken($alert, 33%), darken($alert, 25%));
+
+      &:before {
+      	border-bottom: 1.1em solid $alert;
+      	border-left: 0.67em solid transparent;
+      	border-right: 0.67em solid transparent;
+      	height: 0;
+        content: "!";
+        display: inline-block;
+        font-size: 0.9em;
+        line-height: 1.2;
+        margin: 0 0.5em 0 0;
+        overflow: visible;
+        text-align: center;
+        text-indent: -0.15em;
+        width: 0;
+      }
+    }
+  }
+}

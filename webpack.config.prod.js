@@ -3,11 +3,11 @@ var autoprefixer      = require('autoprefixer');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack           = require('webpack');
 var meta              = { port: 9002 };
-
-var styles       = path.resolve(__dirname, './lib', 'styles');
-var bourbonNeat  = require('node-neat').includePaths;
-var stylePaths   = [styles].concat(bourbonNeat);
-var styleQueries = [];
+var styles            = path.resolve(__dirname, './lib', 'styles');
+var bourbonNeat       = require('node-neat').includePaths;
+var normalizeScss     = require('node-normalize-scss').includePaths;
+var stylePaths        = [styles].concat(bourbonNeat, normalizeScss);
+var styleQueries      = [];
 
 stylePaths.forEach(function(stylePath) {
   styleQueries.push("includePaths[]=" + stylePath)

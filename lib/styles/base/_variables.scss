@@ -1,9 +1,18 @@
+// Layout
+$sm-width: 768px;
+$md-width: 992px;
+$lg-width: 1200px;
+$xl-width: 1400px;
+
+$dashboard-app-star-width: 195px;
+
 // Typography
-$base-font-family: 'Doppio One', 'Helvetica', sans-serif;
+$base-font-family: 'Doppio One', 'Georgia', 'Calibri', 'Helvetica', sans-serif;
+$form-font-family: 'Lato', 'Doppio One', 'Calibri', 'Helvetica', sans-serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 14px;
 
 // Line height
 $base-line-height: 1.5;
@@ -23,6 +32,7 @@ $color2: #90C6E4;
 $color3: #879DA8;
 $color4: #101F30;
 $color5: #1f172f;
+$color6: #61708f;
 
 // Animations
 $base-transition: all 0.3s ease;
@@ -31,11 +41,18 @@ $base-transition: all 0.3s ease;
 $base-white: white;
 $base-black: darken($color5, 50%);
 $base-background-color: $color5;
-$base-font-color: $color2;
+$base-font-color: $base-white;
 $accent-color: $color2;
 $headline-color: $base-white;
 $byline-color: lighten($color3, 25%);
 $action-color: lighten($color5, 5%);
+$text-default: white;
+$text-diminished: $color3;
+$text-actionable: $color2;
+$border-light: $color2;
+$border-dark: $color6;
+$warn: #ffa400;
+$alert: #d2000d;
 
 $error-color: adjust-color($color1,
   $lightness: -10%,
@@ -55,3 +72,6 @@ $base-form-background: transparentize(lighten($base-background-color, 10%), 0.3)
 $form-focus-color: adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 $form-box-shadow: inset 0 1px 3px rgba(black, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px $form-focus-color;
+$button-background-color: #0e0b17;
+$button-border-color: #000000;
+$button-text-color: #ffffff;
