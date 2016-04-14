@@ -1,3 +1,7 @@
+// We don't want to listen to Neat warnings.
+//
+$disable-warnings: true;
+
 // Layout
 $sm-width: 768px;
 $md-width: 992px;
