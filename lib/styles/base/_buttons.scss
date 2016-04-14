@@ -10,7 +10,7 @@ button {
   cursor: pointer;
   display: inline-block;
   font-family: $form-font-family;
-  font-size: $base-font-size * 1.21;
+  font-size: 1.21em;
   font-weight: 600;
   line-height: 1.5;
   text-decoration: none;
@@ -19,7 +19,7 @@ button {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  height: $base-font-size * 3.4;
+  height: 2.8em;
   padding: 0 1em;
 
   .carat {
@@ -46,8 +46,21 @@ button {
   }
 
   &.easy {
-    height: $base-font-size * 4.142857143;
-    font-size: $base-font-size * 1.5;
+    height: 4.142857143em;
+    font-size: 1.5em;
+  }
+
+  &.small {
+    font-size: 0.9em;
+    height: 2.5em;
+    text-transform: none;
+    border: 2px solid #444;
+    border-radius: 0.25em;
+  }
+  &.medium {
+    font-size: 1em;
+    text-transform: none;
+    border: 1px solid #444;
   }
 
   &.block {
