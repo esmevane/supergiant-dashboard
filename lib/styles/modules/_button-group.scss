@@ -34,3 +34,26 @@
     }
   }
 }
+
+
+.context-tabs {
+  margin-right: -1.5em;
+  margin-left: -1.5em;
+  padding: 0 2em;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+
+  button {
+    background: none;
+    font-size: 0.9em;
+    border-bottom: 3px solid transparent;
+    color: $base-white;
+
+    &:hover {
+      border-bottom: 3px solid darken($base-white, 40%);
+    }
+    &.active,
+    &.active:hover {
+      border-bottom: 3px solid $base-white;
+    }
+  }
+}

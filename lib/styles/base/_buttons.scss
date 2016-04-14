@@ -6,11 +6,11 @@ button {
   background-color: $button-background-color;
   border: $button-border-color;
   border-radius: $base-border-radius;
-  color: $button-text-color;
+  color: $action-button-text;
   cursor: pointer;
   display: inline-block;
   font-family: $form-font-family;
-  font-size: 1.21em;
+  font-size: $base-font-size * 1.21;
   font-weight: 600;
   line-height: 1.5;
   text-decoration: none;
@@ -46,15 +46,14 @@ button {
   }
 
   &.easy {
-    height: 4.142857143em;
-    font-size: 1.5em;
+    height: 2.761904762em;
+    font-size: $base-font-size * 1.5;
   }
 
   &.small {
     font-size: 0.9em;
     height: 2.5em;
     text-transform: none;
-    border: 2px solid #444;
     border-radius: 0.25em;
   }
   &.medium {
