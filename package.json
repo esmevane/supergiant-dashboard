@@ -28,11 +28,7 @@
     ]
   },
   "scripts": {
-    "book": "gitbook install && gitbook build",
-    "book:serve": "gitbook install && gitbook serve",
-    "book:static": "rm -rf app/book && npm run book && cp -r _book app/book",
     "build": "webpack --config webpack.config.prod.js",
-    "db:clean": "node scripts/db-clean.js",
     "serve": "npm run build && node server.js",
     "dev": "node server.js",
     "tdd": "mocha --opts mocha.opts --watch --watch-extensions js",
