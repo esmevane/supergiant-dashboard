@@ -1,7 +1,3 @@
-@mixin spacey-fade($deg: 115deg) {
-  background-image: linear-gradient(#{$deg}, #0D2B5A, #2D223C, #000102);
-}
-
 @mixin separated-column($side: right) {
   padding-right: $gutter;
   padding-left: $gutter;
