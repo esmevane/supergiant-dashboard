@@ -1,3 +1,5 @@
+// Glyphs
+// are appended to text and are usually 1.4em tall
 .glyph {
   display: inline-block;
   height: auto;
@@ -52,6 +54,25 @@
 .glyph-x:after { content: "\2716"; }
 
 
+// Icons
+// are prepended to text and are usually 2em or taller
+.icon {
+  background: transparent;
+  display: inline-block;
+  font-size: 1.3em;
+  height: 2em;
+  width: 2em;
+
+  &:before {
+    content: "";
+    background: transparent no-repeat 50% 50%;
+    background-size: contain;
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+  }
+}
+
 .with-icon:before {
   background: transparent no-repeat 50% 50%;
   background-size: contain;
@@ -69,8 +90,11 @@
   content: "";
   background-image: url(/images/city.png);
 }
-
 .icon-satellite:before {
+  content: "";
+  background-image: url(/images/volume.png);
+}
+.icon-disk:before {
   content: "";
   background-image: url(/images/volume.png);
 }

@@ -42,6 +42,12 @@
     }
   }
 
+  &.success {
+    h3 {
+      border-color: $success;
+      background-image: linear-gradient(0deg, darken($success, 33%), darken($success, 25%));
+    }
+  }
   &.warn {
     h3 {
       border-color: $warn;

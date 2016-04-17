@@ -89,9 +89,8 @@ picture {
 
 .code { font-family: monospace }
 
-.text-note {
-  color: $text-diminished;
-}
+.text-note { color: $text-diminished; }
+.text-faded { opacity: 0.67; }
 
 .text-left { text-align: left; }
 .text-right { text-align: right; }

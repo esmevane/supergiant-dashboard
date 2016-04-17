@@ -82,10 +82,12 @@ body {
 
 
 #starfield {
-  z-index: -2;
-  position: fixed;
-  top: 0;
+  bottom: 0;
+  height: 100%;
   left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
 }
 
 #supergiant {
@@ -104,35 +106,22 @@ ul, ol {
 
 // Modular Layouts
 .context-canvas {
+  bottom: 0;
   height: auto;
   left: 0;
   position: fixed;
-  bottom: 0;
   width: 100%;
   transition: $base-transition;
   z-index: -1;
 }
 
 .context-system-resources {
-  background-color: #666666;
-  background-image: linear-gradient(90deg, rgba(96,96,96,0.5), rgba(200,200,200,0.5));
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  background: transparent;
   margin: 2em 0;
-  padding: 1em 1.5em;
+  padding: 0;
   text-align: left;
 
   @include outer-container();
-
-  .resource {
-    @include span-columns(2);
-    @include omega(7n);
-
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    font-size: 10px;
-    padding: 0 1em;
-    margin-top: 1.5em;
-  }
 }
 
 
@@ -174,37 +163,6 @@ ul, ol {
     @include separated-column(right);
     display: table-cell;
     vertical-align: top;
-  }
-}
-
-.status-meter {
-  background-image: linear-gradient(135deg, #412c4c, #412c4c, #1b3688, #1b3688);
-
-
-  border-radius: 1em;
-  display: block;
-  height: 1.33em;
-  margin: 0 0 1em;
-
-  .status-metric {
-    background-image: linear-gradient(180deg, #c7eeff, #9addff);
-    border-radius: 1em;
-    height: 100%;
-    min-width: 1em;
-    position: relative;
-
-    &.warn {
-      background-image: linear-gradient(180deg, lighten($warn, 25%), $warn);
-    }
-
-    &.alert {
-      background-image: linear-gradient(180deg, lighten($alert, 25%), $alert);
-    }
-  }
-
-  &.with-label-right {
-    float: left;
-    width: 75%;
   }
 }
 
