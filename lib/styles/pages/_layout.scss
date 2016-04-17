@@ -102,7 +102,6 @@ ul, ol {
   padding-left: 0;
 }
 
-
 // Modular Layouts
 .context-canvas {
   height: auto;
@@ -110,9 +109,9 @@ ul, ol {
   position: fixed;
   bottom: 0;
   width: 100%;
+  transition: $base-transition;
   z-index: -1;
 }
-
 
 .context-system-resources {
   background-color: #666666;
