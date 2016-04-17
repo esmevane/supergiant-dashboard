@@ -64,17 +64,25 @@
 table.line-items {
   border: none;
   border-top: 1px solid rgba($border-dark, 0.5);
+  text-align: left;
 
-  th {
-    border: none;
-    border-bottom: 1px solid rgba($border-dark, 0.5);
-    font-size: .8em;
-    color: $border-dark;
-  }
-
+  th,
   td {
     border: none;
     border-bottom: 1px solid rgba($border-dark, 0.5);
+  }
+
+  th {
+    font-size: 1.2em;
+  }
+
+  thead {
+    th {
+      border: none;
+      border-bottom: 1px solid rgba($border-dark, 0.5);
+      font-size: .8em;
+      color: $border-dark;
+    }
   }
 
   a {
