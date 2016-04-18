@@ -25,6 +25,7 @@ module.exports = {
   stats:    { colors: true, modules: true, reasons: true },
   progress: true,
   entry: [
+    "font-awesome-sass!./font-awesome-sass.config.js",
     'webpack-dev-server/client?http://localhost:' + meta.port,
     'webpack/hot/only-dev-server',
     path.join(__dirname, 'lib', 'index.js')
@@ -53,6 +54,14 @@ module.exports = {
       {
         test: /\.(scss|sass)$/,
         loader: styleLoader
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff"
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader"
       }
     ]
   }
