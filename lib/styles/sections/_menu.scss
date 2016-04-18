@@ -10,40 +10,33 @@
   padding: 12px 0 0;
   vertical-align: top;
   width: 290px;
-}
 
-.menu-logo-banner {
-  background: url(/images/supergiant.png) no-repeat 0 50%;
-  background-size: 170px auto;
-  display: inline-block;
-  height: 40px;
-  width: 170px;
-  margin: 0 12px;
+  .menu-icon {
+    color: $base-white;
+    display: inline-block;
+    font-size: 24px;
+    height: 40px;
+    line-height: 42px;
+    margin: 0 12px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    width: 28px;
 
-  &:first-child { margin-left: 0; }
-  &:last-child { margin-right: 0; }
-}
-.menu-search-icon {
-  background: url(/images/icon_search.png) no-repeat 50% 50%;
-  background-size: 24px auto;
-  display: inline-block;
-  height: 40px;
-  width: 24px;
-  margin: 0 12px;
+    &:first-child { margin-left: 0; }
+    &:last-child { margin-right: 0; }
 
-  &:first-child { margin-left: 0; }
-  &:last-child { margin-right: 0; }
-}
-.menu-config-icon {
-  background: url(/images/icon_settings.png) no-repeat 50% 50%;
-  background-size: 24px auto;
-  display: inline-block;
-  height: 40px;
-  width: 24px;
-  margin: 0 12px;
+    &.app-logo {
+      background: url(/images/supergiant.png) no-repeat 0 50%;
+      background-size: 170px auto;
+      width: 170px;
+    }
 
-  &:first-child { margin-left: 0; }
-  &:last-child { margin-right: 0; }
+    &.settings-icon {
+      background: url(/images/icon_settings.png) no-repeat 50% 50%;
+      background-size: 24px auto;
+    }
+  }
 }
 
 .menu-omnibar {

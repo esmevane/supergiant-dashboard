@@ -95,16 +95,17 @@ table.line-items {
   background-image: linear-gradient(135deg, #412c4c, #412c4c, #1b3688, #1b3688);
   border-radius: 1em;
   display: block;
-  height: 1.33em;
+  height: 1.5em;
   margin: 0 0 1em;
 
   .status-metric {
     background-image: linear-gradient(180deg, #c7eeff, #9addff);
     border-radius: 1em;
     color: #666666;
+    font-size: 11px;
     font-weight: bold;
     height: 100%;
-    line-height: 1.3;
+    line-height: 1.5;
     min-width: 1em;
     position: relative;
     overflow: hidden;
@@ -131,6 +132,15 @@ table.line-items {
   }
 }
 
+.label-right {
+  float: left;
+  width: 25%;
+  padding-left: 5%;
+  font-size: 1.25em;
+  line-height: 1;
+}
+
+
 
 .resources-list {
   margin: 0;
@@ -143,11 +153,24 @@ table.line-items {
     @include span-columns(3);
     @include omega(4n);
 
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 0.67em;
     font-size: 10px;
-    padding: 1em 1.5em;
+    padding: 1.5em;
     margin-top: 1.33em;
     margin-bottom: 1.33em;
+
+    h3,
+    h4 {
+      &:first-child { margin-top: 0; }
+    }
+
+    menu {
+      a,
+      a:visited {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
   }
 }
