@@ -76,7 +76,7 @@
     "redux-devtools": "^3.1.0",
     "redux-devtools-dock-monitor": "^1.0.1",
     "redux-form": "^4.2.0",
-    "redux-saga": "^0.7.0",
+    "redux-saga": "^0.9.5",
     "redux-slider-monitor": "^1.0.2",
     "reselect": "^2.2.1",
     "resolve-url-loader": "^1.4.3",
