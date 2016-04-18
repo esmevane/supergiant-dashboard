@@ -52,6 +52,7 @@
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "font-awesome": "^4.4.0",
     "font-awesome-sass-loader": "^1.0.1",
     "immutable": "^3.7.6",
     "isomorphic-fetch": "^2.2.1",
