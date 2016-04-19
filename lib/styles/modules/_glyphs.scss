@@ -1,6 +1,8 @@
 // Glyphs
 // are appended to text and are usually 1.4em tall
 .glyph {
+  background: transparent no-repeat 50% 50%;
+  background-size: contain;
   display: inline-block;
   height: auto;
   font-size: 1.3em;
@@ -9,50 +11,65 @@
   background: transparent;
   padding: 0;
   line-height: 1;
-  &:after {
-    border: 0.2em solid $action-button-text;
-    border-radius: 3em;
-    color: $action-button-text;
-    content: "\271a";
-    display: inline-block;
-    font-size: 0.9em;
-    font-weight: normal;
-    height: 1.4em;
-    line-height: 1em;
-    text-align: center;
-    vertical-align: middle;
-    width: 1.33em;
-  }
 }
-
-.with-glyph {
-  &:after {
-    border: 0.15em solid $action-button-text;
-    border-radius: 10em;
-    color: $action-button-text;
-    content: "\271a";
-    display: inline-block;
-    font-size: 0.9em;
-    font-weight: normal;
-    height: 1.4em;
-    line-height: 1.1em;
-    margin: -0.33em -0.25em -0.125em 0.67em;
-    text-align: center;
-    vertical-align: middle;
-    width: 1.4em;
-  }
-}
-
-.glyph-right-arrow:after {
-  background: url(/images/arrow_right.png) no-repeat 50% 50%;
+.glyph:after,
+.with-glyph:after {
+  background: transparent no-repeat 50% 50%;
   background-size: contain;
   border: none;
   content: "";
+  display: inline-block;
+  font-size: 0.9em;
+  height: 1.4em;
+  line-height: 1.1em;
+  text-align: center;
+  vertical-align: middle;
+  width: 1.4em;
+}
+.with-glyph:after {
+  margin: -0.33em -0.25em -0.125em 0.67em;
 }
 
-.glyph-plus:after { content: "\271a"; }
-.glyph-x:after { content: "\2716"; }
-.glyph-pencil:after { content: "\270E"; }
+.glyph-right-arrow:after {
+  background-image: url(/images/icon_right_arrow.svg);
+  content: "";
+}
+.glyph-right-arrow-action-color:after {
+  background-image: url(/images/icon_right_arrow_action.svg);
+  content: "";
+}
+.glyph-down-arrow:after {
+  background-image: url(/images/icon_down_arrow.svg);
+  content: "";
+}
+.glyph-down-arrow-action-color:after {
+  background-image: url(/images/icon_down_arrow_action.svg);
+  content: "";
+}
+.glyph-plus:after {
+  content: "";
+  background-image: url(/images/icon_plus.svg);
+}
+.glyph-x:after {
+  content: "";
+  background-image: url(/images/icon_delete.svg);
+}
+.glyph-x-action-color:after {
+  content: "";
+  background-image: url(/images/icon_delete_action.svg);
+}
+.glyph-pencil:after {
+  content: "";
+  background-image: url(/images/icon_edit.svg);
+}
+.glyph-binary:after {
+  content: "";
+  background-image: url(/images/icon_binary.svg);
+}
+.glyph-binary-action-color:after {
+  content: "";
+  background-image: url(/images/icon_binary_action.svg);
+}
 
 
 // Icons
@@ -63,17 +80,8 @@
   font-size: 1.3em;
   height: 2em;
   width: 2em;
-
-  &:before {
-    content: "";
-    background: transparent no-repeat 50% 50%;
-    background-size: contain;
-    display: inline-block;
-    height: 2em;
-    width: 2em;
-  }
 }
-
+.icon:before,
 .with-icon:before {
   background: transparent no-repeat 50% 50%;
   background-size: contain;
@@ -81,10 +89,13 @@
   content: "";
   display: inline-block;
   font-weight: normal;
-  height: 1.5em;
-  margin: -0.5em 0.5em 0 0;
+  height: 2em;
   vertical-align: middle;
   width: 2em
+}
+.with-icon:before {
+  height: 1.5em;
+  margin: -0.5em 0.5em 0 0;
 }
 
 .icon-city:before {
