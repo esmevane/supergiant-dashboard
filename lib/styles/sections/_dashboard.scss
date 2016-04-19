@@ -19,6 +19,7 @@
   width: 195px;
 
   figure.star {
+    cursor: pointer;
     background-color: $base-white;
     background-image: radial-gradient(circle, #ffffff, #e8e8e8, #aaaaaa);
     border-radius: $base-font-size * 30;
