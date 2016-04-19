@@ -37,6 +37,7 @@ $color3: #879DA8;
 $color4: #101F30;
 $color5: #1f172f;
 $color6: #61708f;
+$color7: #3192f4;
 
 // Animations
 $base-transition: all 0.3s ease;
@@ -51,11 +52,15 @@ $accent-color: $color2;
 $headline-color: $base-white;
 $byline-color: lighten($color3, 25%);
 $action-color: lighten($color5, 5%);
+$active-color: $color7;
 $text-default: white;
 $text-diminished: $color3;
 $text-actionable: $color2;
+$text-active: $color7;
 $border-light: $color2;
 $border-dark: $color6;
+$border-active: $color7;
+$background-active: #0f1937;
 $success: #7ed322;
 $warn: #ffa400;
 $alert: #d2000d;

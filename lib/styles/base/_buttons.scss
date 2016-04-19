@@ -68,6 +68,12 @@ button {
     width: 100%;
   }
 
+  &.active {
+    color: $text-active;
+    box-shadow: 0 0 0 1px $border-active inset;
+    background: $background-active;
+  }
+
   &.esc {
     background-color: transparent;
     background-image: url("data:image/svg+xml;utf8,<svg width='100%' height='100%' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;'><path d='M23.322,31l-15.444,-15l15.444,-15l0.8,0.823l-14.595,14.177l14.595,14.176l-0.8,0.824Z' style='fill:#fff;fill-rule:nonzero;'/></svg>");

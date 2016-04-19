@@ -70,6 +70,18 @@
   content: "";
   background-image: url(/images/icon_binary_action.svg);
 }
+.glyph-deploy-action-color:after,
+.glyph-deploy-action-color.active:after {
+  content: "";
+  background-image: url(/images/icon_deploy.svg);
+  width: 1.65em;
+  height: 1.65em;
+  margin-top: -0.43em;
+}
+.glyph-deploy-action-color.active:after {
+  content: "";
+  background-image: url(/images/icon_deploy_animated.svg);
+}
 
 
 // Icons
@@ -109,4 +121,15 @@
 .icon-disk:before {
   content: "";
   background-image: url(/images/volume.png);
+}
+.icon-deploy:before,
+.icon-deploy.active:before {
+  content: "";
+  background-image: url(/images/icon_deploy.svg);
+  margin-top: -0.5em;
+  margin-bottom: -0.25em;
+}
+.icon-deploy.active:before {
+  content: "";
+  background-image: url(/images/icon_deploy_animated.svg);
 }

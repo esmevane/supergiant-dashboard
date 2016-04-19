@@ -34,7 +34,7 @@
 
   h3 {
     border: 2px solid $border-dark;
-    padding: 0.25em 1em;
+    padding: 0.5em 1em;
     line-height: 1;
 
     &:first-child {
@@ -88,6 +88,12 @@
         text-indent: -0.15em;
         width: 0;
       }
+    }
+  }
+  &.active {
+    h3 {
+      border-color: $border-active;
+      background: $background-active;
     }
   }
 }

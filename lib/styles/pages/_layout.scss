@@ -146,7 +146,7 @@ ul, ol {
 
   .detail,
   .status {
-    @include span-columns(2.16);
+    @include span-columns(2.5);
     @include separated-column(right);
     vertical-align: top;
 
