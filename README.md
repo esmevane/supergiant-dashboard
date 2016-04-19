@@ -1,32 +1,39 @@
 # Supergiant Dashboard
 
-Supergiant Dashboard is one big [node][nodejs] project.  All you should need in order to run it is a current version of [node][nodejs] and [gitbook][gitbook].
+Supergiant Dashboard is a static web-based interface to the Supergiant API.  All you should need in order to run it is a current version of Nodejs.
+
+The overall goal of the Supergiant Dashboard is to create a pleasant, educational interface to the Supergiant APIs which stand up on any given cloud.  Other interfaces include the CLI and the API itself.
 
 ## Installation
 
-Start by ensuring you have the latest version of [node][nodejs], then do the following:
-
-```bash
-npm install -g gitbook-cli
-```
-
-Clone the repo, change directory, and install its dependencies:
+Start by ensuring you have the latest version of node, then clone the repo, change directory, and install its dependencies:
 
 ```bash
 git clone git@github.com:supergiant/supergiant-dashboard
 cd supergiant-dashboard
-npm install && npm run book
+npm install && npm run build
 ```
 
-## Book Server
+## Dependencies
 
-Serve a dynamic live-reloading server for the gitbook:
+Although mocking the API for local development is in the planning stage, it hasn't been completely delivered yet.  For now you'll need an actual running instance of the API set up and going in order to develop on the dashboard.
+
+## Production mode
+
+To start up a "production" version of the dashboard, do the following:
 
 ```bash
-npm run book:serve
+NODE_ENV=production npm run serve
 ```
 
+This builds a production version of the script and kicks off the Express server in production mode.
+
+Production mode means no hot updates of code (or code updates *at all*), because everything is run off of static files.
+
+
 ## Development and Authoring
+
+Thanks to webpack, development mode is pretty pleasant (other than the API dependency).
 
 Enter into development mode:
 
@@ -46,36 +53,28 @@ Start the TDD runner:
 npm run tdd
 ```
 
-Build a production release:
-
-```bash
-npm run build
-```
-
-Author a volume of the book:
-
-```bash
-npm run book
-```
-
-Copy a static release of the gitbook to `app`:
-
-```bash
-npm run book:static
-```
-
 ## Anatomy
 
 The essential wings of the Supergiant Dashboard repo are:
 
 * `app` - This is where the browser client is served and stored.
-* `docs` - A folder full of [Markdown][markdown] files, managed by [gitbook][gitbook]
 * `lib` - The majority of the application pre-build lives here
-  * `lib/scripts` - Browser client and business logic lives here
-  * `lib/server` - Application server definitions live here
-  * `lib/styles` - Styling lives here
 * `spec` - All test suites are in here
 
-[markdown]: http://localhost
-[gitbook]: http://localhost
-[nodejs]: http://localhost
+## License
+
+> This software is licensed under the Apache License, version 2 ("ALv2"), quoted below.
+
+> Copyright 2016 Qbox, Inc., a Delaware corporation. All rights reserved.
+
+> Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may obtain a copy of
+the License at
+
+>   http://www.apache.org/licenses/LICENSE-2.0
+
+> Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations under
+the License.
