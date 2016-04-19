@@ -55,6 +55,7 @@
     "font-awesome": "^4.4.0",
     "font-awesome-sass-loader": "^1.0.1",
     "immutable": "^3.7.6",
+    "immutablediff": "^0.4.2",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.6.1",
     "mocha": "^2.3.4",
