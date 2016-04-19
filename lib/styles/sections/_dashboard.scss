@@ -180,3 +180,10 @@ button.dashboard-new {
   box-shadow: 0 0 $base-font-size * 5 20px transparentize($base-white, 0.8);
   background-color: $base-black;
 }
+
+
+.welcome-component {
+  border-top: 1px solid $border-dark;
+  padding: 1em 0 0;
+  width: 320px;
+}
