@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/supergiant/supergiant-dashboard.svg?branch=master)](https://travis-ci.org/supergiant/supergiant-dashboard)
+[![Coverage Status](https://coveralls.io/repos/github/supergiant/supergiant-dashboard/badge.svg?branch=docker)](https://coveralls.io/github/supergiant/supergiant-dashboard?branch=docker)
+
 # Supergiant Dashboard
 
 Supergiant Dashboard is a static web-based interface to the Supergiant API.  All you should need in order to run it is a current version of Nodejs.
@@ -52,6 +55,14 @@ Start the TDD runner:
 ```bash
 npm run tdd
 ```
+
+## Required Environment variables
+
+* `SG_DASH_USER` - (default `admin`) A basic auth username for the dashboard.
+* `SG_DASH_PASS` - (default `password`) A basic auth password for the dashboard.
+* `SG_API_HOST` - (default `http://localhost`) The URI host for the API.
+* `SG_API_PORT` - (default `8080`) The URI port for the API.
+* `NODE_ENV` - (default `development`) What mode the server runs in.
 
 ## Anatomy
 

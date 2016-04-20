@@ -1,0 +1,28 @@
+language: node_js
+sudo: required
+services:
+  - docker
+
+node_js:
+  - '5.0.0'
+
+install:
+  # Update npm
+  - npm install -g npm@3.3.9
+  - npm --version
+  - npm install
+  - npm install coveralls
+  - npm install mocha-lcov-reporter
+  - npm install -g istanbul@v1.0.0-alpha.2
+
+script:
+  - npm test
+
+after_success:
+  - rm -r node_modules
+  - istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --opts mocha.opts && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose && rm -rf ./coverage
+  - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+  - export REPO=supergiant/supergiant-dashboard
+  - export TAG=`if [ -z "$TRAVIS_TAG" ] && [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; elif [ -z "$TRAVIS_TAG" ] && [ "$TRAVIS_BRANCH" != "master" ]; then echo "unstable-${TRAVIS_BRANCH}"; else echo $TRAVIS_TAG ; fi`
+  - docker build -t $REPO:$TAG .
+  - docker push $REPO
