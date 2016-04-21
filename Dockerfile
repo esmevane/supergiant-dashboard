@@ -1,7 +1,7 @@
-FROM mhart/alpine-node:5.10
+FROM quay.io/trunk/alpine-node-kubernetes:5
 
 ADD . .
-RUN apk add --no-cache git make gcc g++ python
+RUN apk add --update git make gcc g++ python
 RUN rm -rf node_modules && npm install
 
 # Default ENV
