@@ -1,0 +1,53 @@
+.release-detail {
+  @include row(table);
+  background: #000;
+  border: 1px solid $border-dark;
+
+  .release-detail-menu{
+    display: table-cell;
+    width: 25em;
+    border-right: 1px solid $border-dark;
+    vertical-align: top;
+
+    h3,
+    a {
+      display: block;
+      padding: 1.2em;
+      font-size: 1.2em;
+    }
+    a {
+      color: $text-actionable;
+
+      &:hover {
+        background: rgba($active-color, 0.5);
+      }
+      &:active,
+      &:focus {
+        background: $active-color;
+      }
+    }
+
+    p {
+      display: block;
+      padding: 1.5em;
+    }
+  }
+}
+
+.release-detail-show {
+  padding: 2em 3em;
+
+  .release-detail-pane {
+    overflow: scroll;
+  }
+  .collapsible {
+    // max-height: 0;
+
+    &:target {
+      max-height: 60em;
+      background: #444;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
+  }
+}

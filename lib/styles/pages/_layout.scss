@@ -26,6 +26,11 @@ body {
   }
 }
 
+.application-dashboard {
+  padding-bottom: 10em;
+}
+
+
 .application-header {
   z-index: 1;
 }
@@ -176,4 +181,8 @@ ul, ol {
     display: table-cell;
     vertical-align: top;
   }
+}
+
+.resource-note {
+  max-width: 36em;
 }

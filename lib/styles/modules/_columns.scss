@@ -4,35 +4,33 @@
 .row {
   @include row();
   clear: both;
-}
 
-.col-1 { @include span-columns(1); }
-.col-2 { @include span-columns(2); }
-.col-3 { @include span-columns(3); }
-.col-4 { @include span-columns(4); }
-.col-5 { @include span-columns(5); }
-.col-6 { @include span-columns(6); }
-.col-7 { @include span-columns(7); }
-.col-8 { @include span-columns(8); }
-.col-9 { @include span-columns(9); }
-.col-10 { @include span-columns(10); }
-.col-11 { @include span-columns(11); }
-.col-12 { @include span-columns(12); }
+  > .col-1 { @include span-columns(1, block-collapse); }
+  > .col-2 { @include span-columns(2, block-collapse); }
+  > .col-3 { @include span-columns(3, block-collapse); }
+  > .col-4 { @include span-columns(4, block-collapse); }
+  > .col-5 { @include span-columns(5, block-collapse); }
+  > .col-6 { @include span-columns(6, block-collapse); }
+  > .col-7 { @include span-columns(7, block-collapse); }
+  > .col-8 { @include span-columns(8, block-collapse); }
+  > .col-9 { @include span-columns(9, block-collapse); }
+  > .col-10 { @include span-columns(10, block-collapse); }
+  > .col-11 { @include span-columns(11, block-collapse); }
+  > .col-12 { @include span-columns(12, block-collapse); }
 
-.col-1,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-10,
-.col-11,
-.col-12 {
-  &.pad {
-    @include pad()
+  > .col-1,
+  > .col-2,
+  > .col-3,
+  > .col-4,
+  > .col-5,
+  > .col-6,
+  > .col-7,
+  > .col-8,
+  > .col-9,
+  > .col-10,
+  > .col-11,
+  > .col-12 {
+    @include pad(($gutter * .25) ($gutter * .5) ($gutter * .25) ($gutter * .5));
 
     &:first-child {
       padding-left: 0;
@@ -42,47 +40,80 @@
       padding-right: 0;
     }
   }
+
+  &.thin {
+    > .col-1,
+    > .col-2,
+    > .col-3,
+    > .col-4,
+    > .col-5,
+    > .col-6,
+    > .col-7,
+    > .col-8,
+    > .col-9,
+    > .col-10,
+    > .col-11,
+    > .col-12 {
+      @include pad(0 0 0 0);
+    }
+  }
 }
 
 .table-row {
   @include row(table);
   clear: both;
 
-  .col-1 { @include span-columns(1); }
-  .col-2 { @include span-columns(2); }
-  .col-3 { @include span-columns(3); }
-  .col-4 { @include span-columns(4); }
-  .col-5 { @include span-columns(5); }
-  .col-6 { @include span-columns(6); }
-  .col-7 { @include span-columns(7); }
-  .col-8 { @include span-columns(8); }
-  .col-9 { @include span-columns(9); }
-  .col-10 { @include span-columns(10); }
-  .col-11 { @include span-columns(11); }
-  .col-12 { @include span-columns(12); }
+  > .col-1 { @include span-columns(1, block-collapse); }
+  > .col-2 { @include span-columns(2, block-collapse); }
+  > .col-3 { @include span-columns(3, block-collapse); }
+  > .col-4 { @include span-columns(4, block-collapse); }
+  > .col-5 { @include span-columns(5, block-collapse); }
+  > .col-6 { @include span-columns(6, block-collapse); }
+  > .col-7 { @include span-columns(7, block-collapse); }
+  > .col-8 { @include span-columns(8, block-collapse); }
+  > .col-9 { @include span-columns(9, block-collapse); }
+  > .col-10 { @include span-columns(10, block-collapse); }
+  > .col-11 { @include span-columns(11, block-collapse); }
+  > .col-12 { @include span-columns(12, block-collapse); }
 
-  .col-1,
-  .col-2,
-  .col-3,
-  .col-4,
-  .col-5,
-  .col-6,
-  .col-7,
-  .col-8,
-  .col-9,
-  .col-10,
-  .col-11,
-  .col-12 {
-    &.pad {
-      @include pad()
+  > .col-1,
+  > .col-2,
+  > .col-3,
+  > .col-4,
+  > .col-5,
+  > .col-6,
+  > .col-7,
+  > .col-8,
+  > .col-9,
+  > .col-10,
+  > .col-11,
+  > .col-12 {
+    min-height: 1px;
+    @include pad(($gutter * .25) ($gutter * .5) ($gutter * .25) ($gutter * .5));
 
-      &:first-child {
-        padding-left: 0;
-      }
+    &:first-child {
+      padding-left: 0;
+    }
 
-      &:last-child {
-        padding-right: 0;
-      }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &.thin {
+    > .col-1,
+    > .col-2,
+    > .col-3,
+    > .col-4,
+    > .col-5,
+    > .col-6,
+    > .col-7,
+    > .col-8,
+    > .col-9,
+    > .col-10,
+    > .col-11,
+    > .col-12 {
+      @include pad(0 0 0 0);
     }
   }
 }

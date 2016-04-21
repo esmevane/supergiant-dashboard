@@ -73,7 +73,7 @@
 .glyph-deploy-action-color:after,
 .glyph-deploy-action-color.active:after {
   content: "";
-  background-image: url(/images/icon_deploy.svg);
+  background-image: url(/images/icon_deploy_action.svg);
   width: 1.65em;
   height: 1.65em;
   margin-top: -0.43em;
@@ -129,7 +129,14 @@
   margin-top: -0.5em;
   margin-bottom: -0.25em;
 }
-.icon-deploy.active:before {
+.icon-deploy-action-color:before,
+.icon-deploy-action-color.active:before {
+  content: "";
+  background-image: url(/images/icon_deploy_action.svg);
+  margin-top: -0.5em;
+  margin-bottom: -0.25em;
+}
+.icon-deploy-action-color.active:before {
   content: "";
   background-image: url(/images/icon_deploy_animated.svg);
 }

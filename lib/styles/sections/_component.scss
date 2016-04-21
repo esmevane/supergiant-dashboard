@@ -1,10 +1,10 @@
 .create-component {}
 
 .component-create-form {
-  text-align: left;
-  padding-top: 10em;
-
   @include row();
+  min-height: 800px;
+  padding-top: 10em;
+  text-align: left;
 }
 
 .create-component-form-icons {
@@ -170,7 +170,6 @@ $not-running-color: adjust-color($error-color,
     @include row(table);
 
     text-align: left;
-    border-bottom: 1px solid $border-dark;
     padding: 1em 0;
 
     > .col-1, > .col-2, > .col-3, > .col-4, > .col-5, > .col-6,

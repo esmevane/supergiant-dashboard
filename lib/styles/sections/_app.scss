@@ -1,17 +1,4 @@
-.app {}
-
 .app-form {
   text-align: left;
-  padding-top: 10em;
-
-  @include span-columns(12);
-}
-
-.app-form-pad {
-  @include span-columns(3);
-  @include pad();
-}
-
-.app-form-fields {
-  @include span-columns(9);
+  padding-top: 8em;
 }
