@@ -17,12 +17,12 @@ install:
 
 script:
   - npm test
-
-after_success:
-  - rm -r node_modules
-  - istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --opts mocha.opts && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose && rm -rf ./coverage
+  - rm -rf node_modules
   - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
   - export REPO=supergiant/supergiant-dashboard
   - export TAG=`if [ -z "$TRAVIS_TAG" ] && [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; elif [ -z "$TRAVIS_TAG" ] && [ "$TRAVIS_BRANCH" != "master" ]; then echo "unstable-${TRAVIS_BRANCH}"; else echo $TRAVIS_TAG ; fi`
   - docker build -t $REPO:$TAG .
-  - docker push $REPO
+
+after_success:
+  - istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --opts mocha.opts && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose && rm -rf ./coverage
+  - docker push $REPO:$TAG
