@@ -9,7 +9,7 @@
   height: 60px;
   padding: 12px 0 0;
   vertical-align: top;
-  width: 290px;
+  // width: 290px;
 
   .menu-icon {
     color: $base-white;
@@ -24,7 +24,7 @@
     width: 28px;
 
     &:first-child { margin-left: 0; }
-    &:last-child { margin-right: 0; }
+    // &:last-child { margin-right: 0; }
 
     &.app-logo {
       background: url(/images/supergiant.png) no-repeat 0 50%;
@@ -35,11 +35,13 @@
     &.settings-icon {
       background: url(/images/icon_settings.png) no-repeat 50% 50%;
       background-size: 24px auto;
+      float: right;
     }
 
     &.node-icon {
       background: url(/images/icon_node.svg) no-repeat 50% 50%;
       background-size: 24px auto;
+      float: right;
     }
   }
 }
