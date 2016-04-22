@@ -129,7 +129,7 @@ table.line-items {
   border-radius: 1em;
   display: block;
   height: 1.5em;
-  margin: 0 0 1em;
+  margin: 0.5em 0 0.5em;
 
   .status-metric {
     background-image: linear-gradient(180deg, #c7eeff, #9addff);
@@ -171,6 +171,7 @@ table.line-items {
   padding-left: 5%;
   font-size: 1.25em;
   line-height: 1;
+  margin: 0.5em 0 0;
 }
 
 
