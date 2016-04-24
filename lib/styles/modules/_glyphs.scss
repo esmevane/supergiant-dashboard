@@ -50,6 +50,10 @@
   content: "";
   background-image: url(/images/icon_plus.svg);
 }
+.glyph-plus-action-color:after {
+  content: "";
+  background-image: url(/images/icon_plus_action.svg);
+}
 .glyph-x:after {
   content: "";
   background-image: url(/images/icon_delete.svg);

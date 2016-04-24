@@ -25,6 +25,8 @@
   > .col-1, > .col-2, > .col-3, > .col-4, > .col-5, > .col-6,
   > .col-7, > .col-8, > .col-9, > .col-10, > .col-11, > .col-12 {
     @include pad(($gutter * .25) ($gutter * .5) ($gutter * .25) ($gutter * .5));
+    min-height: 0.25em;
+    vertical-align: top;
 
     &:first-child {
       padding-left: 0;
@@ -33,10 +35,11 @@
     &:last-child {
       padding-right: 0;
     }
-  }
 
-  > .col-1, > .col-2, > .col-3, > .col-4, > .col-5, > .col-6,
-  > .col-7, > .col-8, > .col-9, > .col-10, > .col-11, > .col-12 {
+    &.valign-middle {
+      vertical-align: middle;
+    }
+
     &.lined {
       @include lined-column(right, $border-dark);
     }
@@ -53,7 +56,6 @@
 .table-row {
   @include row(table);
   clear: both;
-  vertical-align: top;
 
   &.lined {
     border-bottom: 1px solid $border-dark;
@@ -72,20 +74,11 @@
   > .col-11 { @include span-columns(11, block-collapse); }
   > .col-12 { @include span-columns(12, block-collapse); }
 
-  > .col-1,
-  > .col-2,
-  > .col-3,
-  > .col-4,
-  > .col-5,
-  > .col-6,
-  > .col-7,
-  > .col-8,
-  > .col-9,
-  > .col-10,
-  > .col-11,
-  > .col-12 {
-    min-height: 1px;
+  > .col-1, > .col-2, > .col-3, > .col-4, > .col-5, > .col-6,
+  > .col-7, > .col-8, > .col-9, > .col-10, > .col-11, > .col-12 {
     @include pad(($gutter * .25) ($gutter * .5) ($gutter * .25) ($gutter * .5));
+    min-height: 0.25em;
+    vertical-align: top;
 
     &:first-child {
       padding-left: 0;
@@ -94,29 +87,20 @@
     &:last-child {
       padding-right: 0;
     }
-  }
 
-  &.thin {
-    > .col-1,
-    > .col-2,
-    > .col-3,
-    > .col-4,
-    > .col-5,
-    > .col-6,
-    > .col-7,
-    > .col-8,
-    > .col-9,
-    > .col-10,
-    > .col-11,
-    > .col-12 {
-      @include pad(0 0 0 0);
+    &.valign-middle {
+      vertical-align: middle;
+    }
+
+    &.lined {
+      @include lined-column(right, $border-dark);
     }
   }
 
-  > .col-1, > .col-2, > .col-3, > .col-4, > .col-5, > .col-6,
-  > .col-7, > .col-8, > .col-9, > .col-10, > .col-11, > .col-12 {
-    &.lined {
-      @include lined-column(right, $border-dark);
+  &.thin {
+    > .col-1, > .col-2, > .col-3, > .col-4, > .col-5, > .col-6,
+    > .col-7, > .col-8, > .col-9, > .col-10, > .col-11, > .col-12 {
+      @include pad(0 0 0 0);
     }
   }
 }
