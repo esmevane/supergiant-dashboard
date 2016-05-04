@@ -1,0 +1,13 @@
+$badge-size: $base-font-size;
+
+.badge {
+  background-color: transparentize(red, 0.2);
+  font-size: $badge-size;
+  border-radius: $badge-size;
+  position: absolute;
+  top: $badge-size * 0.25;
+  right: -$badge-size * 0.15;
+  width: $badge-size;
+  height: $badge-size;
+  line-height: $badge-size;
+}
