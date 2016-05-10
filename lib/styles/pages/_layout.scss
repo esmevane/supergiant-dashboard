@@ -77,12 +77,25 @@ body {
   @include row();
 
   h3 {
-    @include span-columns(4);
+    @include span-columns(6);
   }
 
   .context-menu {
     text-align: right;
-    @include span-columns(8);
+    @include span-columns(6);
+  }
+}
+
+.context-footer {
+  text-align: left;
+  margin: 2em 0;
+  padding: 1em 0;
+  border-top: 1px solid $border-dark;
+  @include row();
+
+  .context-menu {
+    text-align: right;
+    @include span-columns(6);
   }
 }
 
