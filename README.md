@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/supergiant/supergiant-dashboard.svg?branch=master)](https://travis-ci.org/supergiant/supergiant-dashboard)
-[![Coverage Status](https://coveralls.io/repos/github/supergiant/supergiant-dashboard/badge.svg?branch=v0.5.15)](https://coveralls.io/github/supergiant/supergiant-dashboard?branch=v0.5.15)
+[![Coverage Status](https://coveralls.io/repos/github/supergiant/supergiant-dashboard/badge.svg?branch=master)](https://coveralls.io/github/supergiant/supergiant-dashboard?branch=master)
 
 # Supergiant Dashboard
 
