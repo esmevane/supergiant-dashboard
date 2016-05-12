@@ -11,8 +11,6 @@ install:
   - npm install -g npm@3.3.9
   - npm --version
   - npm install
-  - npm install coveralls
-  - npm install mocha-lcov-reporter
   - npm install -g istanbul@v1.0.0-alpha.2
 
 script:
@@ -24,5 +22,7 @@ script:
   - docker build -t $REPO:$TAG .
 
 after_success:
-  - istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --opts mocha.opts --bail  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose && rm -rf ./coverage
+  - npm install
+  - npm install coveralls mocha-lcov-reporter
+  - node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --opts mocha.opts --bail  && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose && rm -rf ./coverage
   - docker push $REPO:$TAG
