@@ -1,6 +1,7 @@
 .gem
 .DS_Store
 .sass-cache/
+/coverage/
 /notes/
 /node_modules/
 /tmp/
