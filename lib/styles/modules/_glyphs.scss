@@ -1,33 +1,10 @@
 // Glyphs
 // are appended to text and are usually 1.4em tall
 .glyph {
-  background: transparent no-repeat 50% 50%;
-  background-size: contain;
-  display: inline-block;
-  height: auto;
-  font-size: 1.3em;
-  border: none;
-  border-radius: 3em;
-  background: transparent;
-  padding: 0;
-  line-height: 1;
+  @include glyph();
 }
-.glyph:after,
-.with-glyph:after {
-  background: transparent no-repeat 50% 50%;
-  background-size: contain;
-  border: none;
-  content: "";
-  display: inline-block;
-  font-size: 0.9em;
-  height: 1.4em;
-  line-height: 1.1em;
-  text-align: center;
-  vertical-align: middle;
-  width: 1.4em;
-}
-.with-glyph:after {
-  margin: -0.33em -0.25em -0.125em 0.67em;
+.with-glyph {
+  @include with-glyph();
 }
 
 .glyph-right-arrow:after {
@@ -47,8 +24,7 @@
   content: "";
 }
 .glyph-plus:after {
-  content: "";
-  background-image: url(/images/icon_plus.svg);
+  @include glyph-plus();
 }
 .glyph-plus-action-color:after {
   content: "";

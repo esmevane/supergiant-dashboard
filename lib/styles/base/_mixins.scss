@@ -8,3 +8,56 @@
     border-right: none;
   }
 }
+
+@mixin glyph() {
+  background: transparent no-repeat 50% 50%;
+  background-size: contain;
+  border-radius: 3em;
+  border: none;
+  display: inline-block;
+  font-size: 1.3em;
+  height: auto;
+  line-height: 1;
+  padding: 0;
+
+  &:after {
+    background: transparent no-repeat 50% 50%;
+    background-size: contain;
+    border: none;
+    content: "";
+    display: inline-block;
+    font-size: 0.9em;
+    height: 1.4em;
+    line-height: 1.1em;
+    text-align: center;
+    vertical-align: middle;
+    width: 1.4em;
+  }
+}
+
+@mixin with-glyph() {
+  &:after {
+    background: transparent no-repeat 50% 50%;
+    background-size: contain;
+    border: none;
+    content: "";
+    display: inline-block;
+    font-size: 0.9em;
+    height: 1.4em;
+    line-height: 1.1em;
+    margin: -0.33em -0.25em -0.125em 0.67em;
+    text-align: center;
+    vertical-align: middle;
+    width: 1.4em;
+  }
+}
+
+@mixin glyph-plus() {
+  content: "";
+  background-image: url(/images/icon_plus.svg);
+}
+
+@mixin glyph-minus() {
+  content: "";
+  background-image: url(/images/icon_minus.svg);
+}

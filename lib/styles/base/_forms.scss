@@ -147,3 +147,40 @@ input[type=color] {
   height: $base-font-size * 3;
   border: none;
 }
+
+.addSubtractInt {
+  display: inline-block;
+  overflow: hidden;
+
+  #{&}__subject {
+    background-color: lighten($base-background-color, 10%);
+    display: inline-block;
+    padding: 0 0.25em;
+    vertical-align: middle;
+
+    #{&}__add,
+    #{&}__subtract {
+      @include glyph();
+      @include glyph-plus();
+      font-size: $base-font-size * 0.8;
+      vertical-align: middle;
+      height: 1.5em;
+    }
+
+    #{&}__subtract {
+      @include glyph-minus();
+    }
+
+    #{&}__text {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      min-width: 1em;
+    }
+  }
+
+  #{&}__label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
