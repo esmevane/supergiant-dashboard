@@ -1,0 +1,47 @@
+@import url('../../styles/base.css');
+
+.container {
+  background-color: var(--foreground-container);
+  box-shadow: var(--content-box-shadow);
+  margin: 1em;
+  padding: 1em;
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
+.content {
+  flex: 2;
+  margin-right: 1em;
+}
+
+.content table {
+  width: 100%;
+}
+
+.content thead {
+  text-align: center;
+}
+
+.content td {
+  min-width: 50%
+}
+
+.title {
+  font-size: 1.25em;
+  border-bottom: var(--hard-border);
+  margin-bottom: 0.5em;
+}
+
+.actions { margin-right: 0.5em }
+
+.action {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--font-color-soft-dark);
+  transition: var(--soft-transition);
+}
+
+.action:hover { color: var(--font-color-dark) }

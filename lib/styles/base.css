@@ -1,0 +1,30 @@
+:root {
+  --root-color: rgba(31, 23, 47, 1);
+  --transparent-root-color: rgba(31, 23, 47, 0.9);
+
+  --page-container: rgba(255, 255, 255, 0);
+  --foreground-container: rgba(255, 255, 255, 0.1);
+  --active-foreground-container: rgba(255, 255, 255, 0.2);
+  --see-through-container: rgba(255, 255, 255, 0);
+
+  --soft-border: 1px dotted rgba(255, 255, 255, 0.3);
+  --hard-border: 1px dotted rgba(255, 255, 255, 0.9);
+  --action-border: 1px solid rgba(255, 255, 255, 0.7);
+  --error-border: 2px solid rgba(255, 255, 255, 0.7);
+
+  --input-border: 2px solid rgba(255, 255, 255, 0.7);
+  --input-background: rgba(255, 255, 255, 0.1);
+
+  --font-color-dark: rgba(255, 255, 255, 0.7);
+  --font-color-soft-dark: rgba(255, 255, 255, 0.4);
+  --font-color-light: rgba(255, 255, 255, 0.9);
+  --font-color-soft-light: rgba(255, 255, 255, 0.7);
+
+  --soft-transition: 0.3s all ease-in;
+
+  --content-box-shadow: none;
+  --container-box-shadow: none;
+
+  --label-content: rgba(0, 0, 0, 1);
+  --label-indicator: rgba(255, 255, 255, 1);
+}

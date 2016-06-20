@@ -1,0 +1,105 @@
+@import url('../../styles/base.css');
+
+.menuVisible, .menuHidden,
+.controlsOpen, .controlsClosed,
+.contentVisible, .contentHidden,
+.containerClosed, .containerOpen {
+  transition: var(--soft-transition);
+  transition-delay: 0.3s;
+}
+
+.containerClosed, .containerOpen {
+  background-color: var(--transparent-root-color);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  right: 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.actions {
+  transition: var(--soft-transition);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.menuVisible .actions {
+  animation: flipInX 0.5s;
+  animation-delay: 1s;
+  transition-delay: 1s;
+  opacity: 1
+}
+
+.menuHidden .actions { opacity: 0 }
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: var(--font-color-soft-dark);
+  cursor: pointer;
+  font-size: 1em;
+  outline: none;
+  text-transform: uppercase;
+  transition: var(--soft-transition);
+}
+
+.button i { margin-right: 0.5em }
+.button:hover {
+  color: var(--font-color-dark)
+}
+
+.menuVisible, .menuHidden,
+.contentVisible, .contentHidden {
+  background-color: var(--foreground-container);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.controlsOpen, .controlsClosed {
+  background-color: var(--foreground-container);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5em;
+}
+
+.controlsOpen {
+  font-size: 1.1em;
+  height: 10%;
+}
+
+.controlsClosed {
+  font-size: 1em;
+  height: 100%;
+}
+
+.containerClosed { height: 5% }
+.containerOpen { height: 95% }
+.menuHidden { height: 0% }
+.menuVisible { height: 10% }
+.contentHidden { height: 0% }
+.contentVisible { height: 80% }
+
+.records {
+  padding: 0.5em;
+  text-align: center;
+  width: 16%;
+}
+
+.title {
+  font-size: 1.25em;
+  border-bottom: var(--soft-border);
+}
+
+.record {
+  background-color: var(--foreground-container);
+  padding: 0.5em;
+}

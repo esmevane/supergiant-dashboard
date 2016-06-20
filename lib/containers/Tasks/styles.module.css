@@ -1,0 +1,35 @@
+@import url('../../styles/base.css');
+
+.container {
+  background-color: var(--page-container);
+  box-shadow: var(--container-box-shadow);
+  min-height: 20em;
+  margin: 1em;
+  padding: 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  transition: var(--soft-transition);
+}
+
+.controls > i {
+  transition: var(--soft-transition);
+  margin-right: 1em;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.content {
+  border-top: var(--soft-border);
+  display: flex;
+  padding-top: 1em;
+  transition: var(--soft-transition);
+}

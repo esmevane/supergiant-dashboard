@@ -1,11 +1,14 @@
-process.env.NODE_ENV = 'test'
+"use strict"
 
-import 'babel-polyfill'
-import React from 'react'
-import chai from 'chai'
-import chaiImmutable from 'chai-immutable'
-import chaiAsPromised from 'chai-as-promised'
-import { createRenderer, Simulate } from 'react-addons-test-utils'
+require('babel-polyfill')
+
+const React = require('react')
+const chai = require('chai')
+const chaiImmutable = require('chai-immutable')
+const chaiAsPromised = require('chai-as-promised')
+const ReactTestUtils = require('react-addons-test-utils')
+const createRenderer = ReactTestUtils.createRenderer
+const Simulate = ReactTestUtils.Simulate
 
 chai.use(chaiImmutable)
 chai.use(chaiAsPromised)

@@ -1,0 +1,6 @@
+.container { margin: 0.25em 1em }
+
+.container span {
+  width: 100%;
+  display: flex;
+}

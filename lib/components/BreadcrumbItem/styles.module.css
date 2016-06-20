@@ -1,0 +1,12 @@
+@import url('../../styles/base.css');
+
+.container {
+  cursor: pointer;
+  display: inline-block;
+  color: var(--font-color-soft-light);
+  margin: 0 1em;
+}
+
+.container i {
+  color: var(--font-color-light);
+}

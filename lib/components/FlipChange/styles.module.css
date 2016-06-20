@@ -1,0 +1,2 @@
+.enter, .appear { animation: flipInX 1s }
+.leave { animation: flipOutX 1s }

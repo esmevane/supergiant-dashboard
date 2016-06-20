@@ -1,0 +1,33 @@
+.header {
+  font-size: 1.35em;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.logo {
+  flex: 3;
+  text-align: left;
+  cursor: pointer;
+}
+
+.logo i {
+  padding-right: 0.5em;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.6em;
+  letter-spacing: 0.1em;
+  font-weight: 100;
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  width: 15%;
+}
+
+.options i {
+  cursor: pointer;
+}

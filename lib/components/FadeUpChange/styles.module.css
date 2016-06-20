@@ -1,0 +1,2 @@
+.enter, .appear { animation: fadeInUp 1s }
+.leave { animation: fadeOutDown 1s }

@@ -1,0 +1,12 @@
+@import url('../../styles/base.css');
+
+.enter, .appear { animation: shake 0.3s }
+.leave { animation: flipOutX 1s }
+
+.container { flex: 2 }
+
+.message {
+  cursor: pointer;
+  border-bottom: var(--error-border);
+  font-size: 1em;
+}

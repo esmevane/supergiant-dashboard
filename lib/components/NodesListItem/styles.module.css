@@ -1,0 +1,44 @@
+@import url('../../styles/base.css');
+
+.container {
+  background-color: var(--foreground-container);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 15em;
+  box-shadow: var(--content-box-shadow);
+  min-height: 12em;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5em;
+  border-bottom: var(--soft-border);
+  margin-bottom: 0.5em;
+}
+
+.subheader, .menu {
+  font-size: 0.8em;
+  margin-bottom: 0.5em;
+}
+
+.resource {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 1em;
+  margin-bottom: 0.5em;
+}
+
+.meter {
+  width: 70%;
+}
+
+.meter progress {
+  width: 90%;
+}
+
+.detail {
+  font-size: 0.8em;
+}

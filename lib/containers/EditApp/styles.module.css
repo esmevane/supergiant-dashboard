@@ -1,0 +1,76 @@
+@import url('../../styles/base.css');
+
+.container {
+  background-color: var(--see-through-container);
+  box-shadow: var(--container-box-shadow);
+  min-height: 20em;
+  margin: 1em;
+  padding: 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 4em;
+  padding: 1em;
+}
+
+.controls i { transition: var(--soft-transition) }
+
+.title {
+  font-size: 1.25em;
+  border-bottom: var(--hard-border);
+}
+
+.content {
+  border-top: var(--soft-border);
+  display: flex;
+  padding: 1em;
+  transition: var(--soft-transition);
+  text-align: left;
+}
+
+.gap { width: 20% }
+.overview {
+  margin: 0 1em;
+  width: 20%
+}
+
+.form {
+  width: 30%;
+  padding: 0 1em;
+}
+
+.label {
+  padding-right: 0.5em;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.preview { min-height: 3em }
+.slug { border-bottom: var(--hard-border) }
+
+.button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 1.25em;
+  border-bottom: var(--action-border);
+  background-color: transparent;
+  margin: 1em 0;
+}
+
+
+.input {
+  background-color: var(--input-background);
+  height: 2em;
+  font-size: 1.2em;
+  font-weight: 100;
+  outline: none;
+  padding: 0 1em;
+  border: none;
+  border-bottom: var(--input-border);
+  width: 100%;
+  margin: 1em 0;
+}

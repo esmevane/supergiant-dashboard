@@ -1,0 +1,21 @@
+@import url('./base.css');
+
+* { box-sizing: border-box }
+
+body {
+  background-color: var(--root-color);
+  color: var(--font-color-dark);
+  font-family: 'Helvetica Neue', serif;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color-dark);
+}
+
+button, i { color: var(--font-color-light) }
+
+button:hover, i:hover { animation: pulse 0.5s }
+button:active, i:active { animation: pulse 1s }
+button:disabled { animation: none }

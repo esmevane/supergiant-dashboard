@@ -1,0 +1,83 @@
+@import url('../../styles/base.css');
+
+.container {
+  align-items: center;
+  background-color: var(--font-color-dark);
+  border-radius: 4em;
+  color: var(--font-color-soft-light);
+  cursor: pointer;
+  display: flex;
+  height: 4em;
+  justify-content: center;
+  margin-right: 1em;
+  position: relative;
+  transition: var(--soft-transition);
+  width: 4em;
+}
+
+.content {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.label {
+  color: var(--font-color-light);
+  margin-bottom: 0.25em;
+  border-bottom: var(--hard-border);
+  width: 100%;
+}
+
+.controls {
+  background-color: var(--label-content);
+  border-radius: 0.5em;
+  border: 1px solid var(--label-indicator);
+  box-shadow: var(--content-box-shadow);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  left: 50%;
+  opacity: 0;
+  padding: 0.5em 1em;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transform: translate3d(-50%, 100%, 0);
+  transition: var(--soft-transition);
+  width: 7em;
+}
+
+.controls:before {
+  border-style: solid;
+  border-top: 0;
+  border-bottom: 14px solid var(--label-indicator);
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  content: '';
+  display: block;
+  height: 0;
+  left: 50%;
+  position: absolute;
+  top: -14px;
+  transform: translate3d(-50%, 0, 0);
+  width: 0;
+}
+
+.controls i {
+  color: var(--font-color-soft-light);
+  transition: var(--soft-transition);
+}
+
+.controls i:hover { color: var(--font-color-light) }
+.container:hover .controls { opacity: 1 }
+
+.container:hover {
+  animation: pulse 1s;
+  color: var(--font-color-light);
+}
