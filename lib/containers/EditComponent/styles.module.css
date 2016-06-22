@@ -32,7 +32,7 @@
 
 .color:hover { animation: pulse 1s }
 .colorRadio { display: none }
-.colorRadio:checked + .color { border: 2px solid black }
+.colorRadio:checked + .color { border: 2px solid white }
 .controls i { transition: var(--soft-transition) }
 .gap { width: 20% }
 .preview { min-height: 3em }

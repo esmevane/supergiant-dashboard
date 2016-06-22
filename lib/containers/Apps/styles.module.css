@@ -25,9 +25,7 @@
   text-transform: uppercase;
 }
 
-.label {
-  margin-right: 0.5em;
-}
+.label { margin-right: 0.5em }
 
 .controls {
   display: flex;

@@ -1,0 +1,40 @@
+@import url('../../styles/base.css');
+
+.button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.container {
+  background-color: var(--see-through-container);
+  box-shadow: var(--container-box-shadow);
+  min-height: 20em;
+  margin: 1em;
+  padding: 0;
+}
+
+.content {
+  border-top: var(--soft-border);
+  display: flex;
+  padding: 1em;
+  transition: var(--soft-transition);
+  text-align: left;
+}
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 4em;
+  padding: 1em;
+}
+
+.controls i {
+  transition: var(--soft-transition);
+  margin-right: 1em;
+}
+
+.title {
+  font-size: 1.25em;
+  border-bottom: var(--hard-border);
+}
