@@ -55,11 +55,18 @@
   color: var(--font-color-dark)
 }
 
-.menuVisible, .menuHidden,
+.menuVisible, .menuHidden, {
+  background-color: var(--foreground-container);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
 .contentVisible, .contentHidden {
   background-color: var(--foreground-container);
   display: flex;
   justify-content: space-around;
+  align-items: stretch;
   width: 100%;
 }
 
@@ -89,13 +96,14 @@
 .contentVisible { height: 80% }
 
 .records {
-  padding: 0.5em;
-  text-align: center;
-  width: 16%;
+  padding: 0 1em;
+  width: 100%;
 }
 
 .title {
   font-size: 1.25em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
   border-bottom: var(--soft-border);
 }
 

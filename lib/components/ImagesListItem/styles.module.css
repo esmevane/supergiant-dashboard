@@ -1,0 +1,47 @@
+@import url('../../styles/base.css');
+
+.container {
+  background-color: var(--foreground-container);
+  box-shadow: var(--content-box-shadow);
+  padding: 1em;
+  margin: 1em 0 2em;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header {
+  border-bottom: var(--soft-border);
+  display: flex;
+  align-content: flex-end;
+  justify-content: flex-start;
+}
+
+.title {
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: lighter;
+  margin-right: 1em;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  flex: 3;
+}
+
+.controls button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: var(--font-color-soft-dark);
+  background-color: transparent;
+  text-transform: uppercase;
+  transition: var(--soft-transition);
+}
+
+.controls button:hover { color: var(--font-color-dark) }
+
+.content {
+  flex: 5;
+  text-align: left;
+}

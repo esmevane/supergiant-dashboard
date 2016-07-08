@@ -1,0 +1,64 @@
+@import url('../../styles/base.css');
+
+.container {
+  background-color: var(--page-container);
+  box-shadow: var(--container-box-shadow);
+  min-height: 20em;
+  margin: 1em;
+  padding: 0;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.action {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-bottom: var(--action-border);
+  font-size: 1em;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
+.label { margin-right: 0.5em }
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+}
+
+.controls > i {
+  transition: var(--soft-transition);
+  margin-right: 1em;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content {
+  border-top: var(--soft-border);
+  padding: 1em;
+  transition: var(--soft-transition);
+}
+
+.welcome {
+  width: 20em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.intro { margin-bottom: 4em }
+.intro button { margin-top: 2em }
